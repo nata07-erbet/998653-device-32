@@ -17,72 +17,184 @@
   <main class="page-main">
     <header class="inner-header">
       <h1 class="inner-header__title">Моноподы для селфи</h1>
-      <nav class="inner-navigation">
         <ul class="inner-navigation__list">
           <li class="inner-navigation__item">
-            <a class="inner-navigation__link" href="https://htmlacademy.ru/">Главная</a>
+            <a class="inner-navigation__link" href="source/index.html">Главная</a>
           </li>
           <li class="inner-navigation__item">
-            <a class="inner-navigation__link">Каталог товаров</a>
+            <a class="inner-navigation__link" href="source/catalog.html">Каталог товаров</a>
           </li>
-          <li class="inner-navigation__item">
-            <a class="inner-navigation__link" href="#">Моноподы для селфи</a>
+          <li class="inner-navigation__item inner-navigation__item--current">
+            <a class="inner-navigation__link">Моноподы для селфи</a>
           </li>
         </ul>
-      </nav>
-
-      <section class="filter">
-        <h2 class="visially-hidden">Фильтр</h2>
-        <div class="filter__price">
-          <h3 class="">Стоимость</h3>
-
-        </div>
-
-        <div class="filter__color">
-          <h3 class="">Цвет</h3>
-          <label class="filter__choose_color"
-
-
-        </div>
-
-        <div class="filter__bluetooth">
-          <h3 class="">Bluetooth</h3>
-
-        </div>
-        <a class="filter__button" href="#">Показать</a>
-      </section>
-
-      <section class="sort">
-        <h2 class="visially-hidden">Сортировка</h2>
-        <div class="sort__popular">
-
-        </div>
-
-        <div class=""> <!--стрелочки вверзх/низ-->
-
-        </div>
-
-        <form class="sort__goods-form">
-          <article class="card">
-            <div class="card__img-container">
-              <img class="card__image" src="" width="" height="" alt="любительская селфи-палка">
-              <img class="card__label-new" src="" width="" height="" alt="метка новый товар">
-              <a class="card__details-link" href="#">Подробнее</a>
-             </div>
-
-            <div class="card__info-container">
-              <h3 class="card__title">Любительская селфи-палка</h3>
-              <p class="card__good-price">500 ₽</p></div>
-          </article>
-        </form>
-        <button class="sort__button" type="button">Загрузить еще</button> <!--или submit--> <!--и как на кнопку прикрепить ссылку?-->
-      </section>
-
-
     </header>
 
+      <section class="specifications">
+        <h2 class="visially-hidden">Cортировка по свойствам</h2>
+        <form class="specifications-filter" action="https://echo.htmlacademy.ru/" method="GET"> <!--форма всегда идет как отдельный БЭМ-блок?-->
 
-  </main>
+          <fieldset class="specifications__filter-group">
+            <legend class="specifications__title">Стоимость</legend>
+            <button class="specifications__range-toggle toggle-min" type="submit">
+              <span class="visually-hidden">Изменить минимальную цену</span>
+            </button>
+            <button class="specifications__range-toggle toggle-max" type="submit">
+              <span class="visually-hidden">Изменить максимальную цену</span>
+            </button>
+            <label class="specifications__filter-price" >
+              от <input class="specifications__filter-input" type="number" name="min-price"> ₽
+            </label>
+            <label class="specifications__filter-price">
+              до <input class="specifications__filter-input" type="number" name="max-price" >₽
+            </label>
+          </fieldset>
+
+          <fieldset class="specifications__filter-group">
+            <legend class="specifications__filter-title">Цвет</legend>
+            <ul class="specifications__filter-list">
+              <li class="specifications__filter-item">
+                <label class="specifications__control">
+                  <input class="specifications__control-input" type="checkbox" name="color_black" value="black" checked>
+                  <span class="specifications__control-mark">Черный</span>
+                </label>
+              </li>
+              <li class="specifications__filter-item">
+                <label class="specifications__control">
+                  <input class="specifications__control-input" type="checkbox"  name="color_white" value="white" checked>
+                  <span class="specifications__control-mark">Белый</span>
+                </label>
+               </li>
+               <li class="specifications__filter-item">
+                <label class="specifications__control">
+                  <input class="specifications__control-input" type="checkbox"  name="color_blue" value="blue" >
+                  <span class="specifications__control-mark">Синий</span>
+                </label>
+               </li>
+               <li class="specifications__filter-item">
+                <label class="specifications__control">
+                  <input class="specifications__control-input" type="checkbox"   name="color_red" value="red" >
+                  <span class="specifications__control-mark">Красный</span>
+                </label>
+              </li>
+              <li class="specifications__filter-item">
+                <label class="specifications__control">
+                  <input class="specifications__control-input" type="checkbox" name="color_pink" >
+                  <span class="specifications__control-mark">Розовый</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="specifications__filter-group">
+            <legend class="specifications__filter-title">Bluetooth</legend>
+              <ul class="specifications__filter-list">
+                <li class="specifications__filter-item">
+                  <label class="specifications__control">
+                    <input class="specifications__control-input" type="radio"  name="presence-of-bluetooth" value="yes" checked>
+                    <span class="specifications__control-mark">Есть</span>
+                  </label>
+                </li>
+                <li class="specifications__filter-item">
+                  <label class="specifications__control">
+                    <input class="specifications__control-input" type="radio" name="presence-of-bluetooth" value="no">
+                    <span class="specifications__control-mark">Нет</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="specifications__button" type="submit">Показать</button>
+        </form>
+
+
+
+
+      <section class="products">
+        <h2 class="visially-hidden">Сортировка товаров</h2>
+        <form class="products-sorting" action="https://echo.htmlacademy.ru/" method="GET"> <!--форма это БЭМ или элемент?-->
+          <label class="products__control" for="sorting">сортировка:</label>
+          <select class="products__select" name="sorting" id="sorting">
+            <option class="сatalog__value" value="popular">Сначала популярные</option>
+            <option class="сatalog__value" value="expensive">Сначала дорогие</option>
+            <option class="сatalog__value" value="cheap">Сначала дешевые</option>
+          </select>
+          <button class="visially-hidden" type="submit">Отсортировать</button>
+        </form>
+        <a  class="products__button" href="#"><!--я так понимаю  это ссылка для стрелочки вверх?--></a>
+        <a  class="products__button" href="#"><!--я так понимаю  это ссылка для стрелочки вниз?--></a>
+        <ul class="products__list">
+          <li class="products__item">
+            <article class="product__card">
+              <a class="product__image" href="#">
+                <img class="product__image-photo" src="" width="" height="" alt="любительская селфи-палка">
+                 <p class="products__about">Подробнее</p>
+                <h3 class="products__title">Любительская селфи-палка</h3>
+              </a>
+                <p class="product">500 ₽</p>
+            </article>
+          </li>
+
+          <li class="products__item">
+            <article class="product__card">
+              <a class="product__image" href="#">
+                <img class="product__image-photo" src="" width="" height="" alt="профессиональная селфи-палка">
+                <p class="products__about">Подробнее</p>
+                <h3 class="products__title">Профессиональная селфи-палка </h3>
+              </a>
+                <p class="product">1 500 ₽</p>
+            </article>
+          </li>
+
+          <li class="products__item">
+            <article class="product__card">
+              <a class="product__image" href="#">
+                <img class="product__image-photo" src="" width="" height="" alt="непотопляемая селфи-палка">
+                 <p class="products__about">Подробнее</p>
+                <h3 class="products__title">Непотопляемая селфи-палка</h3>
+              </a>
+                <p class="product">2 500 ₽</p>
+            </article>
+          </li>
+
+          <li class="products__item">
+            <article class="product__card">
+              <a class="product__image" href="#">
+                <img class="product__image-photo" src="" width="" height="" alt="селфи-палка «Следуй за мной">
+                 <p class="products__about">Подробнее</p>
+                <h3 class="products__title">Селфи-палка «Следуй за мной»</h3>
+              </a>
+                <p class="product">4 900 ₽</p>
+            </article>
+          </li>
+        </ul>
+  </section>
+
+  <section class="pangination">
+    <ul class="pangination__list">
+      <li class="pangination__item">
+        <a class="pangination__link pangination__prev" href="#">Назад</a>
+      </li>
+      <li class="pangination__item">
+        <a class="pangination__link" href="#">1</a>
+      </li>
+      <li class="pangination__item">
+        <a class="pangination__link" href="#">2</a>
+      </li>
+      <li class="pangination__item">
+        <a class="pangination__link" href="#">3</a>
+      </li>
+      <li class="pangination__item">
+        <a class="pangination__link" href="#">...</a>
+      </li>
+      <li class="pangination__item">
+        <a class="pangination__link" href="#">15</a>
+      </li>
+      <li class="pangination__item">
+        <a class="pangination__link  pangination__next" href="#">Вперед</a>
+      </li>
+    </ul>
+</section>
+</main>
 
   <footer class="page-footer">
     <!-- я пока не буду копировать - вдруг есть какие то правки-->
