@@ -30,7 +30,7 @@
         </ul>
         <ul class="nav-main__list site-list">
           <li class="site-list__item">
-            <a class="site-list__link"  href="#">Каталог товаров <!--здесь еще будет вложенное меню-->
+            <a class="site-list__link"  href="source/catalog.html">Каталог товаров <!--здесь еще будет вложенное меню-->
             </a>
           </li>
           <li class="site-list__item">
@@ -76,44 +76,39 @@
           <li class="top-gadget__item  top-gadget__item-bracelet slider__item">
             <p class="top-gadget__number">02</p>
             <img  class="top-gadget__image" src="" width="" height="" alt="мотивирующие фитнес-браслет">
-             <button class="top-gadget__button" type="button">
-              <span class="visually-hidden">Предыдущее фото</span>
-              </button>
-              <button class="top-gadget__button" type="button">
-                <span class="visually-hidden">Следующее фото</span>
-                </button>
-              <h3 class="top-gadget__title">Худеем правильно!!</h3>
-              <p class="top-gadget__description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
-              </p>
-              <a class="top-gadget__delals" href="#">Подробнее</a>
-              <div class="top-gadget__specifications">
+            <h3 class="top-gadget__title">Худеем правильно!!</h3>
+            <p class="top-gadget__description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
+            </p>
+            <a class="top-gadget__delals" href="#">Подробнее</a>
+            <div class="top-gadget__specifications">
                 <p class="top-gadget__specifications-description">48 часов</p>
                 <p class="top-gadget__specifications-description">без подзарядки</p>
-              </div>
+            </div>
           </li>
 
           <li class="top-gadget__item  top-gadget__item--selfi slider__item">
             <p class="top-gadget__number">03</p>
             <img  class="top-gadget__image" src="" width="" height="" alt="самая длинная палка для селфи">
-             <button class="top-gadget__button" type="button">
-              <span class="visually-hidden">Предыдущее фото</span>
-              </button>
-              <button class="top-gadget__button" type="button">
-                <span class="visually-hidden">Следующее фото</span>
-                </button>
-              <h3 class="top-gadget__title">Делай селфи,как Бен Стиллер! </h3>
-              <p class="top-gadget__description">ЭСамая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-              <a class="top-gadget__delals" href="#">Подробнее</a>
-              <div class="top-gadget__specifications">
+            <h3 class="top-gadget__title">Делай селфи,как Бен Стиллер! </h3>
+            <p class="top-gadget__description">ЭСамая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
+            <a class="top-gadget__delals" href="#">Подробнее</a>
+            <div class="top-gadget__specifications">
                 <p class="top-gadget__specifications-description">8,5 м</p>
                 <p class="top-gadget__specifications-description">Длина палки</p>
                 <p class="top-gadget__specifications-description">5 кг</p>
                 <p class="top-gadget__specifications-description">Вес палки</p>
                 <p class="top-gadget__specifications-description">Карбон</p>
                 <p class="top-gadget__specifications-description">Материал</p>
-              </div>
+            </div>
           </li>
         </ol>
+
+        <button class="top-gadget__button" type="button">
+          <span class="visually-hidden">Предыдущее фото</span>
+          </button>
+          <button class="top-gadget__button" type="button">
+            <span class="visually-hidden">Следующее фото</span>
+          </button>
 
         <ol class="top-gadget-toggles slider__toggles">
           <li class="slider__toggle slider__toggle--current">
@@ -132,14 +127,6 @@
             </button>
           </li>
         </ol>
-
-       <!--Можно заменить короче?
-          <p class="top-gadget__toggles slider__toggles">
-            <button class="slider__toggle slider__toggle--current">фото1</button>
-            <button class="slider__toggle">фото2</button>
-            <button class="slider__toggle">фото3</button>
-          </p>
-        -->
       </section>
 
       <section class="goods">
@@ -172,68 +159,52 @@
         </ul>
       </section>
 
-      <section class="tabs">
-        <h2 class="visually-hidden">Услуги</h2>
-        <ul class="tabs-menu__list">
-          <li class="tabs-menu__item">
-            <a class="tabs-menu__link tabs-menu__link-current" href="#">Доставка</a>
-          </li>
-          <li class="tabs-menu__item">
-            <a class="tabs-menu__link" href="#">Гарантия</a>
-          </li>
-          <li class="tabs-menu__item">
-            <a class="tabs-menu__link" href="#">Кредит</a>
-          </li>
-        </ul>
-        <h3 class="tabs__title">Доставка</h3>
-        <p class="tabs__description">
-          Мы с удовольствием доставим ваш товар прямо
-          к вашему подъезду совершенно бесплатно! Ведь
-          мы неплохо заработаем, поднимая его на ваш этаж.
-        </p>
-        <img class="tabs__icon" src="" width="" height="" alt="доставка">
+      <section class="services">
+        <h2 class="visually-hidden">Наши услуги</h2>
+        <nav class="services__menu">
+          <ul class="services__menu-list">
+            <li class="services__menu-item">
+              <a class="services__menu-link services__menu-link--current" href="#">Доставка</a>
+            </li>
+            <li class="services__menu-item">
+              <a class="services__menu-link" href="#">Гарантия</a>
+            </li>
+            <li class="services__menu-item">
+              <a class="services__menu-link" href="#">Кредит</a>
+            </li>
+          </ul>
+         </nav>
 
-        <ul class="tabs-menu__list">
-          <li class="tabs-menu__item">
-            <a class="tabs-menu__link " href="#">Гарантия</a>
-          </li>
-          <li class="tabs-menu__item">
-            <a class="tabs-menu__link tabs-menu__link-current"  href="#">Гарантия</a>
-          </li>
-          <li class="tabs-menu__item">
-            <a class="tabs-menu__link" href="#">Кредит</a>
-          </li>
-        </ul>
-        <h3 class="tabs__title">Гарантия</h3>
-        <p class="tabs__description">
-          Если из-за возгорания купленного у нас товара у вас
-          сгорит дом — не переживайте, мы выдадим вам новый.
-          Товар, не дом, конечно же.
+        <ul class="services__list">
+          <li class="services__item">
+            <h3 class="services__title">Доставка</h3>
+            <p class="services__description">
+              Мы с удовольствием доставим ваш товар прямо
+              к вашему подъезду совершенно бесплатно! Ведь
+              мы неплохо заработаем, поднимая его на ваш этаж.
+            </p>
+            <img class="services__icon" src="" width="" height="" alt="доставка">
+         </li>
+         <li class="services__item">
+          <h3 class="services__title">Гарантия</h3>
+          <p class="services__description">
+            Если из-за возгорания купленного у нас товара у вас
+            сгорит дом — не переживайте, мы выдадим вам новый.
+            Товар, не дом, конечно же.
+          </p>
+          <img class="services__icon" src="" width="" height="" alt="гарантия">
+       </li><li class="services__item">
+        <h3 class="services__title">Кредит</h3>
+        <p class="services__description">
+          Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.
         </p>
-        <img class="tabs__icon" src="" width="" height="" alt="гарантия">
-
-        <ul class="tabs-menu__list">
-          <li class="tabs-menu__item">
-            <a class="tabs-menu__link " href="#">Доставка</a>
-          </li>
-          <li class="tabs-menu__item">
-            <a class="tabs-menu__link" href="#">Гарантия</a>
-          </li>
-          <li class="tabs-menu__item">
-            <a class="tabs-menu__link tabs-menu__link-current" href="#">Кредит</a>
-          </li>
-        </ul>
-        <p class="tabs__description">
-          <h3 class="tabs__title">Кредит</h3>
-          Мы с удовольствием доставим ваш товар прямо
-          к вашему подъезду совершенно бесплатно! Ведь
-          мы неплохо заработаем, поднимая его на ваш этаж.
-        </p>
-        <img class="tabs__icon" src="" width="" height="" alt="кредит">
+        <img class="services__icon" src="" width="" height="" alt="кредит">
+     </li>
+    </ul>
   </section>
 
   <section class="delivery-order">
-    <h2 class="visually-hidden">Доставка под заказ</h2>
+    <h2 class="delivery-order__title">Доставим редкий товар под заказ</h2>
     <img class="delivery-order__icon" src="" width="" height="" alt="иконка доставки под заказ">
     <p class="delivery-order__offer">Доставим редкий товар под заказ</p>
     <button class="delivery-order__info-button">
