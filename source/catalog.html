@@ -4,20 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
   <title>Каталог</title>
 </head>
-<body>
+<body class="page__body">
   <header class="page-header">
     <a class="page-header__logo"  href="https://htmlacademy.ru/">
-      <img class="page-header__logo-image" src="" width="" height="" alt="логотип компании девайс">
+      <img class="page-header__logo-image" src="../img/logo.svg" width="145" height="36" alt="логотип компании девайс">
     </a>
       <nav class="nav-main">
         <ul class="nav-main__list user-list">
           <li class="user-list__item">
-            <a class="user-list__link"  href="#">Поиск по сайту</a>
+            <a class= "user-list__link user-list__link--opacity" href="#">Поиск по сайту</a>
           </li>
           <li class="user-list__item">
-            <a class="user-list__link"  href="#">Коля Петухов</a> <!--как реализовать "Выйти"-->
+            <a class="user-list__link"  href="#">Коля Петухов</a>
+          </li>
+          <li class="user-list__item">
+            <button class="user-list__link user-list__link--opacity">Выйти</button>
           </li>
           <li class="user-list__item">
             <a class="user-list__link"  href="#">Сравнить</a>
@@ -28,7 +32,7 @@
         </ul>
         <ul class="nav-main__list site-list">
           <li class="site-list__item">
-            <a class="site-list__link"  href="source/catalog.html">Каталог товаров <!--здесь еще будет вложенное меню-->
+            <a class="site-list__link"  href="#">Каталог товаров <!--здесь еще будет вложенное меню-->
             </a>
           </li>
           <li class="site-list__item">
@@ -44,7 +48,7 @@
       </nav>
     </header>
 
-  <main class="page-main">
+  <main class="page-inner">
     <header class="inner-header">
       <h1 class="inner-header__title">Моноподы для селфи</h1>
         <ul class="inner-navigation__list">
@@ -55,15 +59,17 @@
             <a class="inner-navigation__link" href="source/catalog.html">Каталог товаров</a>
           </li>
           <li class="inner-navigation__item inner-navigation__item--current">
-            <a class="inner-navigation__link">Моноподы для селфи</a>
+            <a class="inner-navigation__link" href="#">Моноподы для селфи</a>
           </li>
         </ul>
     </header>
 
       <section class="specifications">
-        <h2 class="visially-hidden">Cортировка по свойствам</h2>
-        <form class="specifications-filter" action="https://echo.htmlacademy.ru/" method="GET"> <!--форма всегда идет как отдельный БЭМ-блок?-->
+        <div class="specifications__title-wrapper">
+          <h2 class="specifications__title specifications__title--raleway">Фильтр:</h2>
+        </div>
 
+        <form class="specifications-filter" action="https://echo.htmlacademy.ru/" method="GET">
           <fieldset class="specifications__filter-group">
             <legend class="specifications__title">Стоимость</legend>
             <button class="specifications__range-toggle toggle-min" type="submit">
@@ -73,15 +79,15 @@
               <span class="visually-hidden">Изменить максимальную цену</span>
             </button>
             <label class="specifications__filter-price" >
-              от <input class="specifications__filter-input" type="number" name="min-price"> ₽
+              от 0 <input class="specifications__filter-input" type="number" name="min-price">
             </label>
             <label class="specifications__filter-price">
-              до <input class="specifications__filter-input" type="number" name="max-price" >₽
+              до  5000<input class="specifications__filter-input" type="number" name="max-price" >
             </label>
           </fieldset>
 
           <fieldset class="specifications__filter-group">
-            <legend class="specifications__filter-title">Цвет</legend>
+            <legend class="specifications__title">Цвет</legend>
             <ul class="specifications__filter-list">
               <li class="specifications__filter-item">
                 <label class="specifications__control">
@@ -117,7 +123,7 @@
           </fieldset>
 
           <fieldset class="specifications__filter-group">
-            <legend class="specifications__filter-title">Bluetooth</legend>
+            <legend class="specifications__title">Bluetooth</legend>
               <ul class="specifications__filter-list">
                 <li class="specifications__filter-item">
                   <label class="specifications__control">
@@ -138,69 +144,75 @@
       </section>
 
        <section class="products">
-        <h2 class="visially-hidden">Сортировка товаров</h2>
-        <form class="products-sorting" action="https://echo.htmlacademy.ru/" method="GET"> <!--форма это БЭМ или элемент?-->
-          <label class="products__control" for="sorting">сортировка:</label>
-          <select class="products__select" name="sorting" id="sorting">
-            <option class="сatalog__value" value="popular">Сначала популярные</option>
-            <option class="сatalog__value" value="expensive">Сначала дорогие</option>
-            <option class="сatalog__value" value="cheap">Сначала дешевые</option>
-          </select>
-          <button class="visially-hidden" type="submit">Отсортировать</button>
-        </form>
-        <a  class="products__button" href="#"></a>
-        <a  class="products__button" href="#"></a>
+         <div class="products__wrapper-header">
+          <h2 class="products__title products__title--raleway">Сортировка: </h2>
+          <form class="products__form sorting" action="https://echo.htmlacademy.ru/" method="GET">
+            <label class="sorting__control" for="sorting"></label>
+            <select class="sorting__select" name="sorting" id="sorting">
+              <option class="сatalog__value" value="popular">Сначала популярные</option>
+              <option class="сatalog__value" value="expensive">Сначала дорогие</option>
+              <option class="сatalog__value" value="cheap">Сначала дешевые</option>
+            </select>
+            <button class="visially-hidden" type="submit">Отсортировать</button>
+            <a  class="products__button" href="#"></a>
+            <a  class="products__button" href="#"></a>
+          </form>
+         </div>
+
+
         <ul class="products__list">
           <li class="products__item">
             <article class="product__card">
               <a class="product__image" href="#">
-                <img class="product__image-photo" src="" width="" height="" alt="любительская селфи-палка">
-                 <p class="products__about">Подробнее</p>
+                <img class="product__image-photo" src="../img/product-1.jpg" width="360" height="380" alt="любительская селфи-палка">
+                <p class="products__about">Подробнее</p>
+                <p class=" visually-hidden">NEW</p>
                 <h3 class="products__title">Любительская селфи-палка</h3>
               </a>
-                <p class="product">500 ₽</p>
+               <p class="product__cost">500 ₽</p>
             </article>
           </li>
 
           <li class="products__item">
             <article class="product__card">
               <a class="product__image" href="#">
-                <img class="product__image-photo" src="" width="" height="" alt="профессиональная селфи-палка">
-                <p class="products__about">Подробнее</p>
+                <img class="product__image-photo" src="../img/product-2.jpg" width="360" height="380" alt="профессиональная селфи-палка">
                 <h3 class="products__title">Профессиональная селфи-палка </h3>
+                <p class=" visually-hidden">NEW</p>
               </a>
-                <p class="product">1 500 ₽</p>
+                <p class="product__cost">1 500 ₽</p>
             </article>
           </li>
 
           <li class="products__item">
             <article class="product__card">
               <a class="product__image" href="#">
-                <img class="product__image-photo" src="" width="" height="" alt="непотопляемая селфи-палка">
-                 <p class="products__about">Подробнее</p>
+                <img class="product__image-photo" src="../img/product-3.jpg" width="360" height="380" alt="непотопляемая селфи-палка">
                 <h3 class="products__title">Непотопляемая селфи-палка</h3>
+                <p class=" visually-hidden">NEW</p>
               </a>
-                <p class="product">2 500 ₽</p>
+                <p class="product__cost">2 500 ₽</p>
             </article>
           </li>
 
           <li class="products__item">
             <article class="product__card">
               <a class="product__image" href="#">
-                <img class="product__image-photo" src="" width="" height="" alt="селфи-палка «Следуй за мной">
-                 <p class="products__about">Подробнее</p>
+                <img class="product__image-photo" src="../img/product-4.jpg" width="360" height="380" alt="селфи-палка «Следуй за мной">
                 <h3 class="products__title">Селфи-палка «Следуй за мной»</h3>
+                <p class=" visually-hidden visually-hidden--current">NEW</p>
               </a>
-                <p class="product">4 900 ₽</p>
+                <p class="product__cost">4 900 ₽</p>
             </article>
           </li>
         </ul>
+        <button class="products__button-download products__button-download--raleway">Загрузить еще</button>
   </section>
 
   <section class="pangination">
     <ul class="pangination__list">
       <li class="pangination__item">
-        <a class="pangination__link pangination__prev" href="#">Назад</a>
+        <a class="pangination__link pangination__link--raleway pangination__prev" href="#">Назад</a>
       </li>
       <li class="pangination__item">
         <a class="pangination__link" href="#">1</a>
@@ -218,7 +230,7 @@
         <a class="pangination__link" href="#">15</a>
       </li>
       <li class="pangination__item">
-        <a class="pangination__link  pangination__next" href="#">Вперед</a>
+        <a class="pangination__link  pangination__link--raleway pangination__next" href="#">Вперед</a>
       </li>
     </ul>
 </section>
@@ -226,7 +238,7 @@
 
 <footer class="page-footer">
   <a class="page-header__logo" href="#">
-    <img class="page-footer__logo-image" src="" width="" height="" alt="логотип компании девайс">
+    <img class="page-footer__logo-image" src="../img/logo_footer.svg" width="145" height="36" alt="логотип компании девайс">
   </a>
     <address class="contacts__address">
       <p class="contacts__address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
@@ -243,7 +255,7 @@
       </li>
     </ul>
     <address class="contacts__address">
-      <a class="contacts__address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+      <a class="contacts__address-phone-footer" href="tel:+78128121212">+7 (812) 812-12-12</a>
     </address>
     <section class="social">
       <h2 class="visually-hidden">Иконки соц сетей</h2>
@@ -266,7 +278,7 @@
       </ul>
       <p class="page-footer__about">
         <a class="page-footer__logo-link" href="https://htmlacademy.ru/">
-          <img class="page-footer__logo-image" src="" width="" height="" alt="логотип html-academy">
+          <img class="page-footer__logo-image" src="../img/html_academy.svg" width="115" height="33" alt="логотип html-academy">
         </a>
       </p>
 </section>
