@@ -35,7 +35,7 @@
 }
 
 
-.page__body {
+body {
 font-family: "Rubik";
 font-size: 18px;
 line-height: 30px;
@@ -225,7 +225,7 @@ color: ##444444;
 }
 
 .mailing__title{
-font-family: "";
+font-family: "Raleway";
 font-size: 50px;
 line-height: 50px;
 }
@@ -233,6 +233,9 @@ line-height: 50px;
 .mailing__input{
   font-size: 18px;
   opacity: 0.5;
+  flex-wrap: ;
+
+
 }
 
 .mailing__free::before{
@@ -247,6 +250,7 @@ line-height: 50px;
 
 .nav-footer__item {
   list-style: none;
+
 }
 
 .nav-footer__link {
