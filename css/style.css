@@ -303,10 +303,7 @@ line-height: 50px;
   background-color:#F0F0F0;
 }
 
-.specifications__title--raleway,
-.products__title--raleway,
-.products__button-download--raleway,
-.pangination__link--raleway {
+.font-raleway {
   font-family: "Raleway";
   font-size: 16px;
   line-height: 19px;
