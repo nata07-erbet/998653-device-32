@@ -60,12 +60,25 @@ main{
   outline: 5px solid green;
   outline-offset: -5px;
   width: 1160px;
-  display: flex;
   margin: 0 auto;
   background-color: #FFE17F;
   font-size: 16px;
   line-height: 19px;
 }
+.page-header__logo{
+  outline: 5px solid blue;
+  outline-offset: -5px;
+  display: inline-block;
+  width: 1160px;
+  margin-left: 61px;
+}
+
+.page-header__logo-image{
+  vertical-align: bottom;
+}
+.nav-main{
+ }
+
 .nav-main__list{
   display: flex;
   margin: 0;
@@ -74,12 +87,24 @@ main{
 }
 
 .user-list{
-  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 1075px;
   margin-top: 49px;
-  margin-bottom: 44px;
+  margin-bottom: 117px;
+  margin-left: 60px;
+
+
 }
 .site-list{
-  margin-bottom: 167px;
+  outline: 5px solid  red;
+  outline-offset: -5px;
+  display: flex;
+  width: 1041px;
+  margin: auto;
+  margin-top: 113px;
+  margin-bottom: 53px;
+
 }
 
 .page-container {
@@ -87,9 +112,8 @@ main{
   margin: 0 auto;
   outline: 5px solid greenyellow;
   outline-offset: -5px;
-  margin: 0 auto;
-}
 
+}
 .top-gadget__content-wrapper {
   width: 560px;
   margin-right: auto;
@@ -503,6 +527,7 @@ line-height: 50px;
   display: block;
   width: 400px;
   outline: 5px solid green;
+  outline-offset: -5px;
   display: flex;
   margin: 0 auto;
 }
@@ -532,12 +557,23 @@ font-size: 50px;
 line-height: 50px;
 }
 .inner-navigation__list {
+  outline: 1px solid green;
+  width: 425px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
   list-style: none;
 }
+
 .inner-navigation__link {
   color: #000000;
   text-decoration: none;
   opacity: 0.6;
+}
+.catalog__wrapper{
+  width: 1440px;
+  display: flex;
+
 }
 .specifications__title-wrapper{
   background-color:#DCDCDC;
@@ -550,9 +586,15 @@ line-height: 50px;
 .specifications-filter{
   background-color:#F0F0F0;
 }
-.products__wrapper-header{
-  background-color:#F0F0F0;
-}
+
+.products__wrapper{
+  outline: 5px solid green;
+  outline-offset: -5px;
+  width: 972px;
+  display: flex;
+  flex-direction: column;
+  }
+
 
 .font-raleway {
   font-family: "Raleway";
@@ -561,6 +603,15 @@ line-height: 50px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000000;
+}
+
+.specifications__wrapper{
+  outline: 5px solid green;
+  outline-offset: -5px;
+  display: flex;
+  flex-direction: column;
+  width: 470px;
+  margin-right: 72px;
 }
 .specifications__title,
 .products__title{
@@ -594,7 +645,14 @@ line-height: 50px;
   color: #000000;
 }
 .products__list{
+  outline: 2px solid gold;
+  outline-offset: -2px;
+  width: 760px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   list-style: none;
+  padding: 0;
 }
 .product__image {
   text-decoration: none;
