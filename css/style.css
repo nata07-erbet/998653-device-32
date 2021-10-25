@@ -128,7 +128,9 @@ main{
   list-style-type: none;
 
 }
+
 .user-list__link {
+  display: block;
   font-size: 16px;
   line-height: 19px;
   color: #000000;
@@ -142,6 +144,7 @@ main{
   margin-bottom: 19px;
 }
 .site-list__link {
+  display: block;
   font-family: "Raleway";
   font-size: 18px;
   line-height: 21px;
@@ -696,3 +699,6 @@ color: #000000;
 
 
 
+element{
+  grid
+}
