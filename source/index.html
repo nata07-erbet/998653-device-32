@@ -10,47 +10,52 @@
 
   <body>
     <header class="page-header">
-      <div class="page-header__wrapper">
-        <a class="page-header__logo">
-          <img class="page-header__logo-image" src="../img/logo.svg" width="145" height="36" alt="логотип компании девайс">
-        </a>
-          <nav class="nav-main">
-            <ul class="nav-main__list user-list list-reset">
-              <li class="user-list__item ">
-                <a class="user-list__link user-list__link--search"  href="#">Поиск по сайту</a>
-              </li>
-              <li class="user-list__item">
-                <a class="user-list__link"  href="#">Войти</a>
-              </li>
-              <li class="user-list__item">
-                <a class="user-list__link"  href="#">Сравнить</a>
-              </li>
-              <li class="user-list__item">
-                <a class="user-list__link"  href="#">Корзина</a>
-              </li>
-            </ul>
-            <ul class="nav-main__list site-list list list-reset">
-              <li class="site-list__item">
-                <a class="site-list__link"  href="catalog.html">Каталог товаров
-                </a>
-                <li class="site-list__button">
-                  <button class="site-list__button-menu">
-                    <span class="visually-hiden">Вложенное меню</span>
-                  </button>
+        <div class="page-header__wrapper">
+          <a class="page-header__logo">
+            <img class="page-header__logo-image" src="../img/logo.svg" width="145" height="36" alt="логотип компании девайс">
+          </a>
+          <div class="page-header__container">
+            <nav class="nav-main">
+              <ul class="nav-main__list user-list list-reset">
+                <li class="user-list__item ">
+                  <a class="user-list__link user-list__link--search"  href="#">Поиск по сайту</a>
                 </li>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link"  href="#">Доставка</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link"  href="#">Гарантия</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link"  href="#">Контакты</a>
-              </li>
-            </ul>
+                <li class="user-list__item">
+                  <a class="user-list__link"  href="#">Войти</a>
+                </li>
+                <li class="user-list__item">
+                  <a class="user-list__link"  href="#">Сравнить</a>
+                </li>
+                <li class="user-list__item">
+                  <a class="user-list__link"  href="#">Корзина</a>
+                </li>
+              </ul>
+              <ul class="nav-main__list site-list list list-reset">
+                <li class="site-list__item">
+                  <a class="site-list__link"  href="catalog.html">Каталог товаров
+                  </a>
+                  <li class="site-list__button">
+                    <button class="site-list__button-menu">
+                      <span class="visually-hiden">Вложенное меню</span>
+                    </button>
+                  </li>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link"  href="#">Доставка</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link"  href="#">Гарантия</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="site-list__link"  href="#">Контакты</a>
+                </li>
+              </ul>
           </nav>
+          </div>
         </div>
+
+
+
 
     </header>
 
@@ -59,9 +64,10 @@
         <h1 class="page-main__title visually-hidden">Девайс</h1>
 
         <section class="top-gadget">
-          <h2 class="visually-hidden">Слайдер</h2>
-          <ol class="top-gadget__list slider__list">
-            <li class="top-gadget__item  top-gadget__item--quadcopter slider__item">
+          <div class="top-gadget__container">
+            <h2 class="visually-hidden">Слайдер</h2>
+            <ol class="top-gadget__list slider__list list-reset">
+              <li class="top-gadget__item  top-gadget__item--quadcopter slider__item">
                 <img  class="top-gadget__image" src="../img/slider-1.jpg" width="560" height="560" alt="квадрокоптер с мощным лазером">
                 <div class="top-gadget__content-wrapper">
                   <p class="top-gadget__number">01</p>
@@ -99,7 +105,7 @@
                 <p class="top-gadget__number">03</p>
                 <h3 class="top-gadget__title">Делай селфи,как Бен Стиллер! </h3>
                 <p class="top-gadget__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-                <a class="top-gadget__delals" href="#">бнее</a>
+                <a class="top-gadget__delals" href="#">Подробнее</a>
                 <div class="top-gadget__specifications">
                     <p class="top-gadget__specifications-description-number">8,5 м</p>
                     <p class="top-gadget__specifications-description">Длина палки</p>
@@ -109,38 +115,41 @@
                     <p class="top-gadget__specifications-description">Материал</p>
                 </div>
               </div>
-          </li>
+            </li>
           </ol>
+        </div>
+
 
           <div class="slider__controls">
-        <button class="top-gadget__button" type="button">
-          <span class="visually-hidden">Предыдущее фото</span>
+           <button class="top-gadget__button" type="button">
+            <span class="visually-hidden">Предыдущее фото</span>
           </button>
           <button class="top-gadget__button" type="button">
             <span class="visually-hidden">Следующее фото</span>
           </button>
 
-            <ol class="top-gadget-toggles slider__toggles">
-          <li class="slider__toggle slider__toggle--current">
-            <button class="slider__toggle-button">
-              <span class="visually-hidden">фото1</span>
-            </button>
-          </li>
-          <li class="slider__toggle">
-            <button class="slider__toggle-button">
-              <span class="visually-hidden">фото2</span>
-            </button>
-          </li>
-          <li class="slider__toggle slider">
-            <button class="slider__toggle-button">
-              <span class="visually-hidden">фото3</span>
-            </button>
-          </li>
+          <ol class="top-gadget-toggles slider__toggles">
+              <li class="slider__toggle slider__toggle--current">
+                <button class="slider__toggle-button">
+                <span class="visually-hidden">фото1</span>
+                </button>
+              </li>
+              <li class="slider__toggle">
+                <button class="slider__toggle-button">
+                <span class="visually-hidden">фото2</span>
+                </button>
+              </li>
+              <li class="slider__toggle slider">
+                <button class="slider__toggle-button">
+                <span class="visually-hidden">фото3</span>
+                </button>
+              </li>
             </ol>
+          </div>
         </section>
 
         <section class="goods">
-         <div class="goods__wrapper">
+         <div class="goods__container">
           <h2 class="visually-hidden">Список товаров</h2>
           <ul class="goods__list list-reset">
             <li class="goods__item ">
@@ -281,7 +290,7 @@
 
 
         <section class="mailing">
-          <div class="mailing__wrapper">
+          <div class="mailing__container">
             <h2 class="mailing__title">Подпишитесь на рассылку</h2>
             <p class="mailing__description">Еженедельный дайджест с обзорами новинок,
             длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
@@ -291,7 +300,7 @@
               <input class="mailing__input" type="email" id="contacts-mail" name="mail" placeholder="Ваш e-mail">
               <button class="mailing__button" type="button">Подписаться</button>
             </div>
-          </form>
+            </form>
             <p class="mailing__free">Это бесплатно</p>
           </div>
         </section>
@@ -346,9 +355,9 @@
           <a class="page-footer__logo-link" href="https://htmlacademy.ru/">
             <img class="page-footer__logo-image" src="../img/html-academy.svg" width="115" height="33" alt="логотип html-academy">
             </a>
-          </p>
-        </div>
-</footer>
+        </p>
+      </div>
+    </footer>
 
 </body>
 </html>
