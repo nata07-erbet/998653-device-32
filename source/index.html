@@ -10,6 +10,7 @@
 
   <body>
     <header class="page-header">
+      <div class="container">
         <div class="page-header__wrapper">
           <a class="page-header__logo">
             <img class="page-header__logo-image" src="../img/logo.svg" width="145" height="36" alt="логотип компании девайс">
@@ -53,18 +54,14 @@
           </nav>
           </div>
         </div>
-
-
-
-
+      </div>
     </header>
 
     <main>
-      <div class="container">
         <h1 class="page-main__title visually-hidden">Девайс</h1>
 
         <section class="top-gadget">
-          <div class="top-gadget__container">
+          <div class="container">
             <h2 class="visually-hidden">Слайдер</h2>
             <ol class="top-gadget__list slider__list list-reset">
               <li class="top-gadget__item  top-gadget__item--quadcopter slider__item">
@@ -116,8 +113,8 @@
                 </div>
               </div>
             </li>
-          </ol>
-        </div>
+            </ol>
+          </div>
 
 
           <div class="slider__controls">
@@ -149,7 +146,7 @@
         </section>
 
         <section class="goods">
-         <div class="goods__container">
+         <div class="container">
           <h2 class="visually-hidden">Список товаров</h2>
           <ul class="goods__list list-reset">
             <li class="goods__item ">
@@ -177,120 +174,121 @@
               <h3 class="goods__title">Квадрокоптеры</h3>
             </li>
           </ul>
-        </div>
-      </section>
+         </div>
+        </section>
 
         <section class="services">
-        <h2 class="visually-hidden">Наши услуги</h2>
-        <nav class="services__menu">
-          <ul class="services__menu-list list-reset">
-            <li class="services__menu-item">
-              <a class="services__menu-link services__menu-link--current" href="#">Доставка</a>
+          <div class="container">
+            <h2 class="visually-hidden">Наши услуги</h2>
+            <nav class="services__menu">
+              <ul class="services__menu-list list-reset">
+                <li class="services__menu-item">
+                  <a class="services__menu-link services__menu-link--current" href="#">Доставка</a>
+                </li>
+                <li class="services__menu-item">
+                  <a class="services__menu-link" href="#">Гарантия</a>
+                </li>
+                <li class="services__menu-item">
+                  <a class="services__menu-link" href="#">Кредит</a>
+                </li>
+              </ul>
+            </nav>
+            <ul class="services__list list-reset">
+                <li class="services__item">
+                  <div class="services__item-content">
+                    <h3 class="services__title font-title ">Доставка</h3>
+                    <p class="services__description">
+                      Мы с удовольствием доставим ваш товар прямо
+                      к вашему подъезду совершенно бесплатно! Ведь
+                      мы неплохо заработаем, поднимая его на ваш этаж.
+                    </p>
+                  </div>
+                  <img class="services__icon" src="../img/illustration-delivery.svg" width="260" height="240" alt="доставка">
+              </li>
+              <li class="services__item">
+                <div class="services__item-content">
+                  <h3 class="services__title ">Гарантия</h3>
+                  <p class="services__description">
+                    Если из-за возгорания купленного у нас товара у вас
+                    сгорит дом — не переживайте, мы выдадим вам новый.
+                    Товар, не дом, конечно же.
+                  </p>
+                </div>
+                <img class="services__icon" src="../img/illustration-warranty.svg" width="260" height="240" alt="гарантия">
             </li>
-            <li class="services__menu-item">
-              <a class="services__menu-link" href="#">Гарантия</a>
-            </li>
-            <li class="services__menu-item">
-              <a class="services__menu-link" href="#">Кредит</a>
-            </li>
-          </ul>
-         </nav>
-
-        <ul class="services__list list-reset">
             <li class="services__item">
               <div class="services__item-content">
-                <h3 class="services__title font-title ">Доставка</h3>
+                <h3 class="services__title">Кредит</h3>
                 <p class="services__description">
-                  Мы с удовольствием доставим ваш товар прямо
-                  к вашему подъезду совершенно бесплатно! Ведь
-                  мы неплохо заработаем, поднимая его на ваш этаж.
+                  Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.
                 </p>
               </div>
-              <img class="services__icon" src="../img/illustration-delivery.svg" width="260" height="240" alt="доставка">
+              <img class="services__icon" src="../img/illustration-credit.svg" width="260" height="240" alt="кредит">
           </li>
-          <li class="services__item">
-            <div class="services__item-content">
-              <h3 class="services__title ">Гарантия</h3>
-              <p class="services__description">
-                Если из-за возгорания купленного у нас товара у вас
-                сгорит дом — не переживайте, мы выдадим вам новый.
-                Товар, не дом, конечно же.
-              </p>
-            </div>
-            <img class="services__icon" src="../img/illustration-warranty.svg" width="260" height="240" alt="гарантия">
-        </li>
-        <li class="services__item">
-          <div class="services__item-content">
-            <h3 class="services__title">Кредит</h3>
-            <p class="services__description">
-              Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.
-            </p>
-          </div>
-          <img class="services__icon" src="../img/illustration-credit.svg" width="260" height="240" alt="кредит">
-      </li>
-        </ul>
-      </section>
-
-        <section class="delivery-order">
-          <div class="delivery-order__container">
-            <h2 class="delivery-order__title">Доставим редкий товар под заказ</h2>
-            <img class="delivery-order__icon" src="../img/devely.svg" width="47" height="31" alt="иконка доставки под заказ">
-            <button class="delivery-order__info-button">
-              <span class="visually-hidden">Доставка под заказ</span>
-              <!--как прописатьБ чтобы при нажатии на инфо - всплыла форма? Это же сценарий JS?
-              Куда вставлять блок с формой? в общий поток?-->
-            </button>
-
-            <form class="" action="https://echo.htmlacademy.ru/" method="GET"> <!--блок с формой пока напишу тут-->
-            </form>
+            </ul>
           </div>
         </section>
 
-        <div class="information__wrapper">
-          <section class="about">
-            <div class="about__wrapper">
-              <h2 class="about__title font-title ">О нас</h2>
-              <p class="about__advantage">Огромный выбор гаджетов не оставит равнодушным гика,
-              который есть в каждом из нас.</p>
-              <p class="about__advantage">Мы можем доставить ваш товар в самые отдалённые уголки
-              России транспортными компаниями:</p>
-              <ul class="about__list-logistic list reset">
-                <li class="about__item-logistic">Меловые линии</li>
-                <li class="about__item-logistic">СДИК</li>
-                <li class="about__item-logistic">ТоксБерри</li>
-              </ul>
-              <a class="about__more-information" href="#">
-                Подробнее о нас
-              </a>
-            </div>
-          </section>
+        <section class="delivery-order">
+          <div class="container">
+            <div class="delivery-order__container">
+              <img class="delivery-order__icon" src="../img/devely.svg" width="47" height="31" alt="иконка доставки под заказ">
+              <h2 class="delivery-order__title">Доставим редкий товар под заказ</h2>
+                <button class="delivery-order__info-button">
+                <span class="visually-hidden">Доставка под заказ</span>
+              </button>
 
-          <section class="contacts">
-            <div class="contacts__wrapper">
-              <h2 class="contacts__title font-title ">Контакты</h2>
-              <p class="contacts__offer">Вы можете забрать товар сами, заехав в наш офис.
-              Заодно, сможете проверить работоспособность покупки. </p>
-              <h3 class="contacts__title-shop">Интернет-магазин «Девайс»</h3>
-              <address class="contacts__address">
-                <p class="contacts__address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-                <a class="contacts__address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-              </address>
-              <h3 class="contacts__subtitle">Время работы</h3>
-              <ul class="contacts__list-timetable list-reset">
-                <li class="contacts__item-timetable">пн—пт: с 10:00 до 22:00</li>
-                <li class="contacts__item-timetable">сб—вс: с 10:00 до 19:00</li>
-              </ul>
-              <a class="contacts__feedback">
-                Напишите нам
-              </a>
+              <form class="" action="https://echo.htmlacademy.ru/" method="GET"> <!--блок с формой пока напишу тут-->
+              </form>
             </div>
-          </section>
+          </div>
+        </section>
+
+        <div class="information__wrapper container">
+            <section class="about">
+              <div class="about__wrapper">
+                <h2 class="about__title font-title ">О нас</h2>
+                <p class="about__advantage">Огромный выбор гаджетов не оставит равнодушным гика,
+                который есть в каждом из нас.</p>
+                <p class="about__advantage">Мы можем доставить ваш товар в самые отдалённые уголки
+                России транспортными компаниями:</p>
+                <ul class="about__list-logistic list reset">
+                  <li class="about__item-logistic">Меловые линии</li>
+                  <li class="about__item-logistic">СДИК</li>
+                  <li class="about__item-logistic">ТоксБерри</li>
+                </ul>
+                <a class="about__more-information" href="#">
+                  Подробнее о нас
+                </a>
+              </div>
+            </section>
+
+            <section class="contacts">
+              <div class="contacts__wrapper">
+                <h2 class="contacts__title font-title ">Контакты</h2>
+                <p class="contacts__offer">Вы можете забрать товар сами, заехав в наш офис.
+                Заодно, сможете проверить работоспособность покупки. </p>
+                <h3 class="contacts__title-shop">Интернет-магазин «Девайс»</h3>
+                <address class="contacts__address">
+                  <p class="contacts__address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+                  <a class="contacts__address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+                </address>
+                <h3 class="contacts__subtitle">Время работы</h3>
+                <ul class="contacts__list-timetable list-reset">
+                  <li class="contacts__item-timetable">пн—пт: с 10:00 до 22:00</li>
+                  <li class="contacts__item-timetable">сб—вс: с 10:00 до 19:00</li>
+                </ul>
+                <a class="contacts__feedback">
+                  Напишите нам
+                </a>
+              </div>
+            </section>
         </div>
 
 
 
         <section class="mailing">
-          <div class="mailing__container">
+          <div class="container">
             <h2 class="mailing__title">Подпишитесь на рассылку</h2>
             <p class="mailing__description">Еженедельный дайджест с обзорами новинок,
             длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
@@ -304,11 +302,10 @@
             <p class="mailing__free">Это бесплатно</p>
           </div>
         </section>
-      </div>
-    </main>
+      </main>
 
     <footer class="page-footer">
-      <div class="page-footer__container">
+      <div class="container">
         <a class="page-footer__logo" href="#">
           <img class="page-footer__logo-image" src="../img/logo_footer.svg" width="145" height="36" alt="логотип компании девайс">
         </a>
