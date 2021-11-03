@@ -51,7 +51,7 @@
                   <a class="site-list__link"  href="#">Контакты</a>
                 </li>
               </ul>
-          </nav>
+            </nav>
           </div>
         </div>
       </div>
@@ -68,15 +68,20 @@
                 <img  class="top-gadget__image" src="img/slider-1.jpg" width="560" height="560" alt="квадрокоптер с мощным лазером">
                 <div class="top-gadget__content-wrapper">
                   <p class="top-gadget__number">01</p>
-                  <h3 class="top-gadget__title font-title ">Порхает как бабочка,жалит как пчела!</h3>
+                  <h3 class="top-gadget__title font-title">Порхает как бабочка,жалит как пчела!</h3>
                   <p class="top-gadget__description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
                   </p>
                   <a class="top-gadget__detals" href="#">Подробнее</a>
-                  <div class="top-gadget__specifications">
-                    <p class="top-gadget__specifications-description-numerals">800 м</p>
-                    <p class="top-gadget__specifications-description">Дальность полета</p>
-                    <p class="top-gadget__specifications-description-numerals">500 м</p>
-                    <p class="top-gadget__specifications-description">Радиус поражения</p>
+
+                  <div class="top-gadget__specifications-wrapper">
+                    <div class="general">
+                      <p class="top-gadget__specifications-description-number">800 м</p>
+                      <p class="top-gadget__specifications-description">Дальность полета</p>
+                     </div>
+                     <div class="general">
+                      <p class="top-gadget__specifications-description-number">500 м</p>
+                      <p class="top-gadget__specifications-description">Радиус поражения</p>
+                     </div>
                   </div>
                 </div>
               </li>
@@ -85,13 +90,15 @@
                   <img  class="top-gadget__image" src="img/slider-2.jpg" width="560" height="560" alt="мотивирующий фитнес-браслет">
                   <div class="top-gadget__content-wrapper">
                     <p class="top-gadget__number">02</p>
-                    <h3 class="top-gadget__title">Худеем правильно!!</h3>
+                    <h3 class="top-gadget__title font-title">Худеем правильно!!</h3>
                     <p class="top-gadget__description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
                     </p>
                     <a class="top-gadget__detals" href="#">Подробнее</a>
-                    <div class="top-gadget__specifications">
-                        <p class="top-gadget__specifications-description-numerals">48 часов</p>
+                    <div class="top-gadget__specifications-wrapper">
+                      <div class="general">
+                        <p class="top-gadget__specifications-description-number">48 часов</p>
                         <p class="top-gadget__specifications-description">без подзарядки</p>
+                      </div>
                     </div>
                   </div>
               </li>
@@ -100,16 +107,23 @@
                 <img  class="top-gadget__image" src="img/slider-3.jpg" width="560" height="560" alt="самая длинная палка для селфи">
                 <div class="top-gadget__content-wrapper">
                   <p class="top-gadget__number">03</p>
-                  <h3 class="top-gadget__title">Делай селфи,как Бен Стиллер! </h3>
+                  <h3 class="top-gadget__title font-title">Делай селфи,как Бен Стиллер! </h3>
                   <p class="top-gadget__description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-                  <a class="top-gadget__delals" href="#">Подробнее</a>
-                  <div class="top-gadget__specifications">
+                  <a class="top-gadget__detals" href="#">Подробнее</a>
+                  <div class="top-gadget__specifications-wrapper">
+                    <div class="genaral">
                       <p class="top-gadget__specifications-description-number">8,5 м</p>
                       <p class="top-gadget__specifications-description">Длина палки</p>
+                     </div>
+                     <div class="genaral">
                       <p class="top-gadget__specifications-description-number">5 кг</p>
                       <p class="top-gadget__specifications-description">Вес палки</p>
+                    </div>
+                    <div class="general">
                       <p class="top-gadget__specifications-description-number">Карбон</p>
                       <p class="top-gadget__specifications-description">Материал</p>
+                    </div>
+
                   </div>
                 </div>
               </li>
@@ -179,52 +193,54 @@
         <section class="services">
           <div class="container">
             <h2 class="visually-hidden">Наши услуги</h2>
-            <nav class="services__menu">
-              <ul class="services__menu-list list-reset">
-                <li class="services__menu-item">
-                  <a class="services__menu-link services__menu-link--current" href="#">Доставка</a>
+            <div class="services__wrapper">
+              <nav class="services__menu">
+                <ul class="services__menu-list list-reset">
+                  <li class="services__menu-item">
+                    <a class="services__menu-link services__menu-link--current" href="#">Доставка</a>
+                  </li>
+                  <li class="services__menu-item">
+                    <a class="services__menu-link" href="#">Гарантия</a>
+                  </li>
+                  <li class="services__menu-item ">
+                    <a class="services__menu-link" href="#">Кредит</a>
+                  </li>
+                </ul>
+              </nav>
+              <ul class="services__list list-reset">
+                  <li class="services__item">
+                    <div class="services__item-content">
+                      <h3 class="services__title font-title ">Доставка</h3>
+                      <p class="services__description">
+                        Мы с удовольствием доставим ваш товар прямо
+                        к вашему подъезду совершенно бесплатно! Ведь
+                        мы неплохо заработаем, поднимая его на ваш этаж.
+                      </p>
+                    </div>
+                    <img class="services__icon" src="img/illustration-delivery.svg" width="260" height="240" alt="доставка">
                 </li>
-                <li class="services__menu-item">
-                  <a class="services__menu-link" href="#">Гарантия</a>
-                </li>
-                <li class="services__menu-item">
-                  <a class="services__menu-link" href="#">Кредит</a>
-                </li>
-              </ul>
-            </nav>
-            <ul class="services__list list-reset">
-                <li class="services__item">
+                <li class="services__item services__item--warranty">
                   <div class="services__item-content">
-                    <h3 class="services__title font-title ">Доставка</h3>
+                    <h3 class="services__title ">Гарантия</h3>
                     <p class="services__description">
-                      Мы с удовольствием доставим ваш товар прямо
-                      к вашему подъезду совершенно бесплатно! Ведь
-                      мы неплохо заработаем, поднимая его на ваш этаж.
+                      Если из-за возгорания купленного у нас товара у вас
+                      сгорит дом — не переживайте, мы выдадим вам новый.
+                      Товар, не дом, конечно же.
                     </p>
                   </div>
-                  <img class="services__icon" src="img/illustration-delivery.svg" width="260" height="240" alt="доставка">
+                  <img class="services__icon" src="img/illustration-warranty.svg" width="260" height="240" alt="гарантия">
               </li>
-              <li class="services__item">
+              <li class="services__item services__item--credit">
                 <div class="services__item-content">
-                  <h3 class="services__title ">Гарантия</h3>
+                  <h3 class="services__title">Кредит</h3>
                   <p class="services__description">
-                    Если из-за возгорания купленного у нас товара у вас
-                    сгорит дом — не переживайте, мы выдадим вам новый.
-                    Товар, не дом, конечно же.
+                    Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.
                   </p>
                 </div>
-                <img class="services__icon" src="img/illustration-warranty.svg" width="260" height="240" alt="гарантия">
+                <img class="services__icon" src="img/illustration-credit.svg" width="260" height="240" alt="кредит">
             </li>
-            <li class="services__item">
-              <div class="services__item-content">
-                <h3 class="services__title">Кредит</h3>
-                <p class="services__description">
-                  Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.
-                </p>
-              </div>
-              <img class="services__icon" src="img/illustration-credit.svg" width="260" height="240" alt="кредит">
-          </li>
-            </ul>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -233,7 +249,7 @@
             <div class="delivery-order__container">
               <img class="delivery-order__icon" src="img/devely.svg" width="47" height="31" alt="иконка доставки под заказ">
               <h2 class="delivery-order__title">Доставим редкий товар под заказ</h2>
-                <button class="delivery-order__info-button">
+                <button class="delivery-order__info-button"> i
                 <span class="visually-hidden">Доставка под заказ</span>
               </button>
 
@@ -243,15 +259,19 @@
           </div>
         </section>
 
-        <div class="information__wrapper container">
+        <div class="container">
+          <div class="information__wrapper">
             <section class="about">
               <div class="about__wrapper">
                 <h2 class="about__title font-title ">О нас</h2>
-                <p class="about__advantage">Огромный выбор гаджетов не оставит равнодушным гика,
-                который есть в каждом из нас.</p>
-                <p class="about__advantage">Мы можем доставить ваш товар в самые отдалённые уголки
-                России транспортными компаниями:</p>
-                <ul class="about__list-logistic list reset">
+                <div class="about__wrapper-content">
+                  <p class="about__advantage">Огромный выбор гаджетов не оставит равнодушным гика,
+                    который есть в каждом из нас.</p>
+                    <p class="about__advantage">Мы можем доставить ваш товар в самые отдалённые уголки
+                    России транспортными компаниями:</p>
+                  </div>
+
+                <ul class="about__list-logistic list-reset">
                   <li class="about__item-logistic">Меловые линии</li>
                   <li class="about__item-logistic">СДИК</li>
                   <li class="about__item-logistic">ТоксБерри</li>
@@ -282,13 +302,15 @@
                 </a>
               </div>
             </section>
+          </div>
+
         </div>
 
 
 
         <section class="mailing">
           <div class="container">
-            <h2 class="mailing__title">Подпишитесь на рассылку</h2>
+            <h2 class="mailing__title font-title">Подпишитесь на рассылку</h2>
             <p class="mailing__description">Еженедельный дайджест с обзорами новинок,
             длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
             <form class="mailing__form" action="https://echo.htmlacademy.ru/" method="GET">
@@ -308,10 +330,13 @@
         <a class="page-footer__logo" href="#">
           <img class="page-footer__logo-image" src="img/logo_footer.svg" width="145" height="36" alt="логотип компании девайс">
         </a>
-        <div class="page-footer__wrapper-content">
+        <div class="page-footer__wrapper-container">
+          
+        </div>
           <address class="contacts__address">
             <p class="contacts__address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
           </address>
+
           <ul class="nav-footer__list list-reset">
             <li class="nav-footer__item">
               <a class="nav-footer__link"  href="#">Доставка</a>
@@ -326,8 +351,7 @@
           <address class="contacts__address">
             <a class="contacts__address-phone-footer" href="tel:+78128121212">+7 (812) 812-12-12</a>
           </address>
-        </div>
-        <section class="social">
+          <section class="social">
           <h2 class="visually-hidden">Иконки соц сетей</h2>
           <ul class="social__list list-reset">
             <li class="social__item">
@@ -346,7 +370,8 @@
               </a>
             </li>
           </ul>
-        </section>
+          </section>
+
         <p class="page-footer__about">
           <a class="page-footer__logo-link" href="https://htmlacademy.ru/">
             <img class="page-footer__logo-image" src="img/html-academy.svg" width="115" height="33" alt="логотип html-academy">
