@@ -35,10 +35,16 @@
   font-display: swap;
 }
 
+/*.hidden,
+.services__item--hidden,
+.services__menu-item--hidden{
+  display: none; почему не сработало?*/
+
+
 .visually-hidden,
-.services__item--warranty,
-.services__menu-item--credit,
-.services__item--credit{
+.hidden,
+.services__item--hidden,
+.services__menu-item--hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -48,6 +54,13 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.title {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
 .list-reset{
   margin:0;
   padding:0;
@@ -94,14 +107,12 @@ main{
     margin: 0 auto;
     padding-top: 0px;
     padding-right: 59px;
-    padding-bottom: 118px;
     padding-left: 60px;
   }
 
   .page-header__container{
     outline: 3px solid rgb(0, 128, 0);
     margin: 0 auto;
-    margin-bottom: 38px;
     font-size: 16px;
     line-height: 19px;
 
@@ -176,7 +187,14 @@ main{
 }
 
 .top-gadget{
+  outline: 3px solid fuchsia;
+  outline-offset: -5px;
   margin-bottom: 70px;
+
+}
+.top-gadget__wrapper{
+  background: linear-gradient(to bottom, #FFE17F 0% 9%,  #FFFFFF 9% 100%);
+
 }
 .top-gadget__item {
   display: flex;
@@ -191,6 +209,7 @@ main{
 }
 .top-gadget__number{
   margin: 0;
+  margin-top: 20px;
   font-family: "Rubik";
   font-weight: 800;
   font-size: 180px;
@@ -294,8 +313,7 @@ main{
 }
 
 .services__menu{
-  width: 200px;
-  margin-right: 120px;
+  width: 160px;
 }
 .services__menu-list {
   font-family: "Raleway";
@@ -315,6 +333,7 @@ main{
  .services__list {
    outline: 5px solid red;
    outline-offset: -5px;
+   width: 695px;
   }
 
  .services__title {
@@ -385,29 +404,25 @@ main{
   justify-content: space-between;
 }
 
+.about{
+  width: 560px;
+}
 .about__wrapper{
   width: 560px;
   outline: 5px solid red;
   outline-offset: -5px;
 }
 .about__wrapper-content{
-  height: 202px;
   outline: 3px solid rgb(61, 7, 211);
   outline-offset: -5px;
   margin-bottom: 23px;
 }
-.about__wrapper-content:last-child {
+.about__advantage:last-child {
   margin-bottom: 0;
 }
-.font-title {
-  font-family: "Raleway";
-  font-weight: 800;
-  font-size: 50px;
-  line-height: 50px;
-}
+
 .about__title {
   margin: 0;
-  margin-top: 42px;
   margin-bottom: 26px;
 }
 
@@ -420,6 +435,7 @@ main{
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
+  margin-bottom: 70px;
 }
 .about__item-logistic{
   margin-bottom: 28px;
@@ -438,12 +454,14 @@ main{
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin-bottom: 87px;
 }
 
  .about__more-information {
    text-decoration: none;
    color: #000000;
+ }
+ .contacts{
+   width: 560px;
  }
 .contacts__wrapper{
   width: 560px;
@@ -455,7 +473,6 @@ main{
 }
 .contacts__title{
   margin: 0;
-  margin-top: 42px;
   margin-bottom: 26px;
 }
 .contacts__offer{
@@ -489,25 +506,45 @@ main{
   margin-bottom: 67px;
 }
 .mailing{
-  background-color: #F0F0F0;
-  padding: auto;
-  padding-top: 75px;
-  padding-bottom:134px;
 
 }
 
-.mailing__container{
-  outline: 2px solid red;
+.mailing__wrapper{
+  outline: 4px solid rgb(253, 62, 142);
   outline-offset: -5px;
- }
+  background-color: #F0F0F0;
+  padding: 140px;
+  padding-top: 75px;
+  padding-bottom: 131px;
+}
+
+.mailing__wrapper-description{
+
+  outline: 3px solid rgb(108, 226, 255);
+  outline-offset: -5px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+}
+.mailing__wrapper-send {
+  outline: 3px solid rgb(108, 226, 255);
+  outline-offset: -5px;
+  display: flex;
+  justify-content: space-between;
+}
 
 .mailing__title{
-  outline: 5px solid green;
+  margin: 0;
+  outline: 2px solid green;
   outline-offset: -5px;
+  margin-right: 40px;
 
 }
+
 .mailing__description{
-  outline: 5px solid green;
+  margin: 0;
+  outline: 2px solid green;
   outline-offset: -5px;
 
 }
@@ -515,6 +552,7 @@ main{
 .mailing__wrapper-form{
 
 }
+
 .mailing__input{
   font-size: 18px;
   opacity: 0.5;
@@ -530,32 +568,39 @@ main{
 .page-footer {
   background-color: #444444;
   color: #FFFFFF;
-
+}
+.page-footer__logo {
+  display: inline-block;
+  margin-top:62px;
+  margin-bottom: 36px;
 }
 
-.page-footer__container{
-  outline: 3px solid pink;
-  outline-offset: -5px;
-}
-
-.page-footer__wrapper-content{
-  outline: 5px solid orange;
-  outline-offset: -5px;
+.contacts__wrapper-addres{
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  outline: 3px solid rgb(255, 0, 136);
+  outline-offset: -5px;
+  margin-bottom: 49px;
+
+}
+.social__wrapper {
+  display: flex;
+  justify-content: space-between;
+  outline: 3px solid blue;
+  outline-offset: -5px;
+  margin-bottom: 61px;
+
 }
 
 .contacts__address-text{
-  width: 240px;
   font-size: 16px;
   line-height: 19px;
   text-align: left;
+  width: 239px;
 }
 
 .nav-footer__list{
-  /*outline: 5px solid blue;
-  outline-offset: -5px;*/
+
   display: flex;
   justify-content: space-between;
   width: 460px;
@@ -563,7 +608,6 @@ main{
 
 .contacts__address-phone-footer{
   display: block;
-  width: 400px;
  /* outline: 5px solid darkorange;
   outline-offset: -5px;*/
 
@@ -617,16 +661,30 @@ line-height: 19px;
 color: #000000;
 }
 
+.inner-header__wrapper{
+  outline: 3px solid palevioletred;
+  outline-offset: -5px;
+  padding-top: 90px;
+  padding-bottom: 50px;
+  padding-left: 60px;
+  background: linear-gradient(to bottom, #FFE17F 0 25%, #FFFFFF 25% 100% );
+}
+
 .inner-header__title{
   margin: 0;
-  margin-left: 60px;
+  margin-bottom: 20px;
 }
 
 .inner-navigation__list {
   display: flex;
   justify-content: flex-start;
-  margin-left: 60px; ;
+}
+.inner-navigation__item{
+  margin-right: 20px;
+}
 
+.inner-navigation__item:last-child{
+  margin-right: 0;
 }
 
 .inner-navigation__link {
@@ -650,30 +708,34 @@ color: #000000;
   margin-left: 60px;
   margin-right: 72px;
 }
-
 .specifications__wrapper{
-
+  background-color: #EBEBEB;
 }
-
-.specifications__title-wrapper{
+.specifications__title{
+  margin: 0;
   background-color:#DCDCDC;
+  padding: 25px 0;
+  margin-bottom: 83px;
 }
 .products__container{
-  outline: 3px solid rgb(221, 107, 241);
+  outline: 3px solid greenyellow;
   outline-offset: -5px;
-  box-sizing: border-box;
-
-
-
-
 }
+
 .products__wrapper{
   display: flex;
   flex-direction: column;
   }
+.products__wrapper-title{
+  display: flex;
+  align-items: flex-start;
+  background-color: #EBEBEB;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  margin-bottom: 70px;
+}
 
-
-.font-sort {
+.sort {
   font-family: "Raleway";
   font-size: 16px;
   line-height: 19px;
@@ -682,8 +744,7 @@ color: #000000;
   color: #000000;
 }
 
-.specifications__title,
-.products__title{
+.specifications__subtitle{
   margin: 0;
   font-family: "Rubik";
   font-weight: 700;
@@ -704,6 +765,7 @@ color: #000000;
   color: #000000;
 }
 .specifications__button{
+  margin-top: 52px;
   font-family: "Raleway";
   font-size: 18px;
   line-height: 21px;
@@ -715,6 +777,9 @@ color: #000000;
   color: #000000;
 }
 
+.products__title{
+  margin: 0;
+}
 .products__list-container{
   outline: 2px solid rgb(248, 3, 105);
   outline-offset: -2px;
