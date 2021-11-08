@@ -259,7 +259,7 @@ main{
   display: inline-block;
   width: 220px;
   margin-bottom: 70px;
-  background-color: #FFE17F;;
+  background-color: #FFE17F;
 }
 
 .top-gadget__specifications-description-number{
@@ -408,7 +408,6 @@ main{
   width: 560px;
 }
 .about__wrapper{
-  width: 560px;
   outline: 5px solid red;
   outline-offset: -5px;
 }
@@ -467,8 +466,6 @@ main{
   width: 560px;
   outline: 5px solid red;
   outline-offset: -5px;
-  display: flex;
-  flex-direction: column;
   margin-left: auto;
 }
 .contacts__title{
@@ -505,7 +502,9 @@ main{
 .contacts__list-timetable{
   margin-bottom: 67px;
 }
-.mailing{
+
+.mailing__form{
+  display: grid;
 
 }
 
@@ -699,13 +698,13 @@ color: #000000;
   outline: 3px solid blue;
 }
 
-.container__wrapper{
+.catalog-products__wrapper{
   display: flex;
+  padding-left: 60px ;
 }
 .specifications{
   width: 269px;
   outline: 3px solid yellow;
-  margin-left: 60px;
   margin-right: 72px;
 }
 .specifications__wrapper{
@@ -777,24 +776,40 @@ color: #000000;
   color: #000000;
 }
 
-.products__title{
-  margin: 0;
-}
+
 .products__list-container{
   outline: 2px solid rgb(248, 3, 105);
   outline-offset: -2px;
+  margin-bottom: 44px;
 
 }
 
 .products__list{
   display: grid;
-  grid-template-columns: 360px 360px;
-  grid-template-rows: 482px 482px;
-  gap:40px;
-  }
+  grid-template-columns: repeat(2, 360px);
+  column-gap: 40px;
+  row-gap: 44px;
+}
 
-.product__image {
+.product__image{
+  outline: 2px solid rgb(19, 3, 248);
+  outline-offset: -2px;
+  display: grid;
+  grid-template-columns: 280px auto;
+  grid-template-rows: 380px auto;
+  grid-template-areas: "image image"
+                       "title cost";
+ row-gap: 32px;
+
+}
+.product__image-photo {
   text-decoration: none;
+  grid-area: image;
+}
+
+.products__title{
+  margin: 0;
+  grid-area: title;
 }
 
 .products__about{
@@ -808,9 +823,27 @@ color: #000000;
   text-decoration: none;
 }
 .product__cost{
+  grid-area: cost;
   margin: 0;
   color: #444444;
 }
 
+.products__button-download {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 19px;
+  margin-bottom: 51px;}
 
+
+  .pangination {
+    background-color: #EBEBEB;
+    margin-bottom: 77px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+  }
+
+  .pangination__list {
+    display: flex;
+    justify-content: space-between;
 
