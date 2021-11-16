@@ -64,9 +64,32 @@
             <ul class="inner-navigation__list list-reset">
               <li class="inner-navigation__item">
                 <a class="inner-navigation__link" href="source/index.html">Главная</a>
+                  <svg class="inner-navigation__link-icon" width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_24_677)">
+                    <path d="M3.7999 3.09995L0.799902 0.0999512C0.599902 -0.100049 0.299902 -0.100049 0.0999023 0.0999512C-9.76548e-05 0.299951 -9.76548e-05 0.699951 0.0999023 0.899951L2.6999 3.49995L0.0999023 6.09995C-9.76548e-05 6.29995 -9.76548e-05 6.59995 0.0999023 6.79995C0.199902 6.89995 0.399902 6.99995 0.499902 6.99995C0.599902 6.99995 0.799902 6.89995 0.899902 6.89995L3.8999 3.89995C3.8999 3.79995 3.9999 3.59995 3.9999 3.49995C3.9999 3.39995 3.8999 3.19995 3.7999 3.09995Z" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_24_677">
+                    <rect width="4" height="7" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+
               </li>
               <li class="inner-navigation__item">
-                <a class="inner-navigation__link" href="source/catalog.html">Каталог товаров</a>
+                <a class="inner-navigation__link" href="source/catalog.html">Каталог товаров  </a>
+                    </svg>
+                  <svg  class="inner-navigation__link-icon "width="4" height="7" viewBox="0 0 4 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_24_677)">
+                    <path d="M3.7999 3.09995L0.799902 0.0999512C0.599902 -0.100049 0.299902 -0.100049 0.0999023 0.0999512C-9.76548e-05 0.299951 -9.76548e-05 0.699951 0.0999023 0.899951L2.6999 3.49995L0.0999023 6.09995C-9.76548e-05 6.29995 -9.76548e-05 6.59995 0.0999023 6.79995C0.199902 6.89995 0.399902 6.99995 0.499902 6.99995C0.599902 6.99995 0.799902 6.89995 0.899902 6.89995L3.8999 3.89995C3.8999 3.79995 3.9999 3.59995 3.9999 3.49995C3.9999 3.39995 3.8999 3.19995 3.7999 3.09995Z" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_24_677">
+                    <rect width="4" height="7" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+
               </li>
               <li class="inner-navigation__item inner-navigation__item--current">
                 <a class="inner-navigation__link" href="#">Моноподы для селфи</a>
@@ -82,39 +105,46 @@
             <section class="specifications">
               <!--ФИЛЬТР-->
               <div class="specifications__wrapper">
-                <div class="specifications__title-wrapper">
                   <h2 class="specifications__title sort">Фильтр:</h2>
-                </div>
+
 
                 <form class="specifications-filter" action="https://echo.htmlacademy.ru/" method="GET">
                     <fieldset class="specifications__filter-group">
                       <legend class="specifications__subtitle">Стоимость</legend>
-                      <button class="specifications__range-toggle toggle-min" type="submit">
-                        <span class="visually-hidden">Изменить минимальную цену</span>
-                      </button>
-                      <button class="specifications__range-toggle toggle-max" type="submit">
-                        <span class="visually-hidden">Изменить максимальную цену</span>
-                      </button>
-                      <label class="specifications__filter-price" >
-                        от 0 <input class="specifications__filter-input" type="number" name="min-price">
-                      </label>
-                      <label class="specifications__filter-price">
-                        до  5000<input class="specifications__filter-input" type="number" name="max-price" >
-                      </label>
+                      <div class="specifications__filter-wrapper">
+                        <button class="specifications__range-toggle toggle-min" type="submit">
+                          <span class="visually-hidden">Изменить минимальную цену</span>
+                        </button>
+                        <button class="specifications__range-toggle toggle-max" type="submit">
+                          <span class="visually-hidden">Изменить максимальную це
+                            ну</span>
+                        </button>
+                        <label class="specifications__filter-price" >
+                          от 0 <input class="specifications__filter-input visually-hidden" type="number" name="min-price">
+                        </label>
+                        <label class="specifications__filter-price">
+                          до  5000
+                          <input class="specifications__filter-input  visually-hidden" type="number" name="max-price" >
+                        </label>
+                      </div>
+
                     </fieldset>
 
                     <fieldset class="specifications__filter-group">
                       <legend class="specifications__subtitle ">Цвет</legend>
                       <ul class="specifications__filter-list list-reset">
                         <li class="specifications__filter-item">
-                          <label class="specifications__control">
-                            <input class="specifications__control-input" type="checkbox" name="color_black" value="black" checked>
-                            <span class="specifications__control-mark">Черный</span>
-                          </label>
+                          <input class=" specifications__control-input  specifications__control-input--checked" type="checkbox" name="color_black" value="black" id="black" checked>
+                          <label class="specifications__control" for="black">
+                          <span class="specifications__control-mark">Черный</span>
                         </li>
                         <li class="specifications__filter-item">
-                          <label class="specifications__control">
-                            <input class="specifications__control-input" type="checkbox"  name="color_white" value="white" checked>
+
+                            <input class="specifications__control-input specifications__control-input-c-hecked" type="checkbox"  name="color_white" value="white" id="white" checked>
+                            <label class="specifications__control" for="white">
+                            <svg class="specifications__control-input-icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M10 0L3.1 6.6L0 3.6V6.9L3.2 10L10 3.3V0Z" fill="black"/>
+                            </svg>
                             <span class="specifications__control-mark">Белый</span>
                           </label>
                         </li>
@@ -140,23 +170,26 @@
                     </fieldset>
 
                     <fieldset class="specifications__filter-group">
-                      <legend class="specifications__subtitle> Bluetooth </legend>
+                      <legend class="specifications__subtitle"> Bluetooth </legend>
                         <ul class="specifications__filter-list list-reset">
                           <li class="specifications__filter-item">
-                            <label class="specifications__control">
-                              <input class="specifications__control-input" type="radio"  name="presence-of-bluetooth" value="yes" checked>
-                              <span class="specifications__control-mark">Есть</span>
-                            </label>
+
+                            <label class="specifications__control-radio" for="yes">
+                              <input class="specifications__control-input-radio" type="radio"  name="presence-of-bluetooth"  value="yes" checked>
+                              <span class="specifications__control-mark-radio">Есть</span>
+                             </label>
                           </li>
+
                           <li class="specifications__filter-item">
-                            <label class="specifications__control">
-                              <input class="specifications__control-input" type="radio" name="presence-of-bluetooth" value="no">
-                              <span class="specifications__control-mark">Нет</span>
-                          </label>
+                            <input class="specifications__control-input-radio" type="radio" name="presence-of-bluetooth" value="no" id="no">
+                            <label class="specifications__control-radio" for="yes">
+                            <span class="specifications__control-mark-radio">Нет</span>
+
                         </li>
                       </ul>
+
                     </fieldset>
-                    <button class="specifications__button" type="submit">Показать</button>
+                    <button class="specifications__button condition" type="submit">Показать</button>
                 </form>
               </div>
             </section>
@@ -165,7 +198,7 @@
               <section class="products">
                   <div class="products__wrapper">
                     <div class="products__wrapper-title">
-                      <h2 class="products__title sort">Сортировка: </h2>
+                      <h2 class="products__title-sort sort">Сортировка: </h2>
                       <form class="products__form sorting" action="https://echo.htmlacademy.ru/" method="GET">
                         <label class="sorting__control" for="sorting"></label>
                         <select class="sorting__select" name="sorting" id="sorting">
@@ -173,7 +206,17 @@
                           <option class="сatalog__value" value="expensive">Сначала дорогие</option>
                           <option class="сatalog__value" value="cheap">Сначала дешевые</option>
                         </select>
-                        <button class="visially-hidden" type="submit">Отсортировать</button>
+                        <button class="сatalog__value-button"  type="submit">
+                          <svg  class=" сatalog__value-button-up" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 0L11 10H0" fill="black"/>
+                            </svg>
+                        </button>
+                        <button class="сatalog__value-button"  type="submit">
+                          <svg class="сatalog__value-button-down" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 10L0 0H11" fill="black"/>
+                          </svg>
+                        </button>
+
                         <a  class="products__button" href="#"></a>
                         <a  class="products__button" href="#"></a>
                     </form>
@@ -186,13 +229,17 @@
                       <li class="products__item">
                         <article class="product__card">
                           <a class="product__image" href="#">
-                            <img class="product__image-photo" src="img/product-1.jpg" width="360" height="380" alt="любительская селфи-палка">
+                            <img class="product__image-photo" src="img/product-1.png" width="360" height="380" alt="любительская селфи-палка">
                             <h3 class="products__title">Любительская селфи-палка</h3>
                             <p class="product__cost">500 ₽</p>
                           </a>
 
                         </article>
-                        <p class="products__about">Подробнее</p>
+                        <a class="products__about_link" href="#">
+                          <span class="products__about">
+                            Подробнее
+                          </span>
+                        </a>
                       </li>
 
                       <li class="products__item">
@@ -227,7 +274,7 @@
                     </ul>
                   </div>
 
-                <button class="products__button-download sort">Загрузить еще</button>
+                <button class="products__button-download sort" type="submit">Загрузить еще</button>
               </section>
                 <!--ПАНГИНАЦИЯ-->
               <section class="pangination">
@@ -251,7 +298,7 @@
                           <a class="pangination__link" href="#">15</a>
                         </li>
                         <li class="pangination__item">
-                          <a class="pangination__linksort pangination__next" href="#">Вперед</a>
+                          <a class="pangination__link sort pangination__next" href="#">Вперед</a>
                         </li>
                       </ul>
               </section>
