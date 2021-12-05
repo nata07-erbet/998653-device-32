@@ -78,6 +78,26 @@ html {
   box-sizing: inherit;
 }
 
+.condition {
+  outline: 2px solid red;
+  display: inline-block;
+  height: 50px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 0 40px;
+  padding-top: 14px;
+  padding-bottom: 16px;
+  background: linear-gradient(to bottom,  transparent 0 42%, #FFE17F 42% 56%, transparent 56% 100% );
+  text-decoration: none;
+}
+
 body {
   width: 1440px;
   margin: 0 auto;
@@ -143,96 +163,109 @@ main{
   min-height: 20px;
   margin-bottom: 29px;
 }
-.user-list__item{
-  position: relative;
-}
-.user-list__link{
+.user-list__link {
   display: block;
-  /*padding: 10px;* - или убрать? в состоянии actile обводка 40px*/
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  text-align: left;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 10px 20px;
 }
 
 .user-list__link:hover {
   opacity: 0.6;
 }
 
-.user-list__link:focus { /*как сделать, чтобы иконка тоже попала в обводкуБ если ей задано абсолютное позиционирование?*/
- /* border: 2px solid #AF4FFF;*/
-  border-radius: 20px;
-}
-.user-list__link:active {
-  opacity: 0.3;
+.user-list__link:focus { /*поиск по сайту не сработало - остальное -огонь*/
+  outline: none;
+  border-color: #AF4FFF;
 }
 
-.user-list__link--search{
-  margin-left: 36px;
-}
-.user-list__link--search:active { /* в разметке рисуем поле для поиска и кнопку?*/
-  border: 2px solid #000000;
+.user-list__link--search {
   box-sizing: border-box;
-  border-radius: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
 }
 
-.user-list__link--enter{
-  position: relative;
+.user-list__search-form {
+  width: 516px;
 }
 
-.user-list__icon-enter{
-  position: absolute;
-  top: 2px;
-  right:0px;
-  left: -25px;
-  bottom: 0px;
-  margin-right: auto;
+.user-list__search {
+  display: flex;
 }
 
-.user-list__icon-compare{
-  position: absolute;
-  top: 2px;
-  right: 0;
-  bottom: 0;
-  left: -22px;
-  margin-right: auto;
+.user-list__search::before {
+  content: "";
+  display: inline-block;
+  background-image: url("../img/search.svg");
+  width: 16px;
+  height: 16px;
+  margin-right: 20px;
+  align-self: center;
+}
+
+.user-list___search-input {
+  width: 100%;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.user-list__link--enter::before{
+  content: "";
+  display: inline-block;
+  background-image: url("../img/enter.svg");
+  width: 13px;
+  height: 12px;
+  margin-right: 12px;
+}
+
+.user-list__link--compare::before {
+  content: "";
+  display: inline-block;
+  background-image: url("../img/compare.svg");
+  width: 10px;
+  height: 12px;
+  margin-right: 10px;
 }
 
 .user-list__link--basket{
-  position: relative;
+  padding-left: 15px;
 }
-
-.user-list__link--basket:focus {
- /* border: 2px solid #AF4FFF;*/
-  border-radius: 20px;
-}
-
-.user-list__link--basket:hover{
-  opacity: 0.6;
-}
-
-.user-list__link--basket:active {
-  opacity: 0.3;
-}
-
 
 .user-list__link--basket::before{
+  content: "";
+  display: inline-block;
+  background-image: url("../img/basket.svg");
+  width: 16px;
+  height: 14px;
+  margin-right: 10px;
+
+}
+.user-list__link--basket::after{
+  display: inline-block;
+  position: absolute;
+  right: -47px;
   content: "2";
   width: 21px;
   height: 21px;
   background-color: #FFFFFF;
   border-radius: 50%;
-  position: absolute;
-  z-index: 1;
-  top:0px;
-  left: -40px;
-
+  text-align: center;
 }
-.user-list__icon-basket{
-  position: absolute;
-  top: 2px;
-  right:0px;
-  left: -24px;
-  bottom: 0px;
-  margin-right: auto;
-}
-
 
 .site-list{
   /*outline: 1px solid  red;*/
@@ -242,18 +275,51 @@ main{
   }
 
  .site-list__button-menu {
-   border: none;
    position: relative;
-   background-color: #FFE17F;
+   display: inline-block;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background-color: transparent;
+   opacity: 0.2;
+   border: 2px solid #000000;
   }
 
-.site-list__button-plus{
-  position: absolute;
-  top: 0px;
-  right:0px;
-  left: 0px;
-  bottom: 0px;
-}
+  .site-list__button-menu:hover {
+    opacity: 1;
+  }
+
+  .site-list__button-menu:hover:after {
+    display: none;
+  }
+
+
+/*как лучше крестик посьавить по центру?*/
+  .site-list__button-menu::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 2px;
+    background-color:#000000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+ }
+
+
+  .site-list__button-menu::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 2px;
+    background-color: #000000;
+    transform: rotate(90deg) translate(-2px, 0);
+
+
+  }
+
+
 
 
 .top-gadget__content-wrapper {
@@ -264,19 +330,10 @@ main{
 }
 
 
-.user-list__link {
-  display: block;
-  font-size: 16px;
-  line-height: 19px;
-  color: #000000;
-  text-align: left;
-  text-decoration: none;
-}
-.user-list__link--search {
-  opacity: 0.3;
-}
+
 
 .site-list__link {
+  position: relative;
   display: block;
   font-family: "Raleway";
   font-size: 18px;
@@ -289,17 +346,60 @@ main{
   letter-spacing: 0.2em;
 }
 
-.site-list__link:focus {
- /* border: 2px solid #AF4FFF;*/
-  border-radius: 20px;
+.site-list__link::before { /*как увеличить горизонтальные отспупы?*/
+
+  content: "";
+  width: 100%;
+  height: 50px;
+  border: 2px solid #AF4FFF;
+  border-radius: 30px;
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px 20px;
+  box-sizing: content-box;
+  opacity: 0;
+}
+
+.site-list__link:focus::before {
+  outline: none;
+  opacity: 1;
 }
 
 .site-list__link:hover {
-  opacity: 0.6;
+  border-bottom: 2px solid #000000;
+
 }
-.site-list__link:{
+.site-list__link:active{
+  border-bottom: 2px solid #000000;
   opacity: 0.3;
+  border-radius: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .top-gadget{
   /*outline: 3px solid fuchsia*/?
@@ -364,17 +464,21 @@ main{
   font-size: 16px;
 }
 .top-gadget__detals {
-  font-family: "Raleway";
-  font-size: 18px;
-  line-height: 22px;
-  color: #000000;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  display: inline-block;
-  width: 220px;
   margin-bottom: 70px;
-  background: linear-gradient(to bottom,  #FFFFFF 0 30%, #FFE17F 30% 70%, #FFFFFF 70% 100% );
+}
+
+
+.top-gadget__detals:focus{
+  background: linear-gradient(to bottom,  transparent 0 42%, #AF4FFF 42% 56%, transparent 56% 100% )
+}
+
+.top-gadget__detals:hover{
+  background-color: #FFE17F ;
+}
+
+.top-gadget__detals:active{
+  background-color: #FFE17F ;;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .top-gadget__specifications-description-number{
@@ -412,7 +516,8 @@ main{
   letter-spacing: -0.02em;
 }
 .services{
-  background: linear-gradient(to bottom, #FFFFFF 0 10%, #F0F0F0 10% 100%);
+  position: relative;
+  background: linear-gradient(to bottom, #FFFFFF 0 5%, #F0F0F0 5% 100%);
   padding-bottom: 69px;
   margin-bottom: 90px;
  }
@@ -425,32 +530,62 @@ main{
 }
 
 .services__menu{
-  width: 160px;
+  margin-top: ;
 }
 .services__menu-list {
+  position: relative;
   font-family: "Raleway";
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.services__menu-list::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 319px;
+  height: 7px;
+  background-color: #000000;
+  transform: rotate(90deg);
+  top:0;
+  left: 120px ;
 
 }
-.services__menu-link{
-  display: inline-block;
+.services__menu-item {
+  margin-bottom: 45px;
+}
+
+.services__menu-item:last-child {
+  margin-bottom: 0;
+}
+
+.services__menu-link.condition{
+  outline: 1px red solid;
+  background: linear-gradient(to bottom,  transparent 0 40%, #FFC700 40% 60%, transparent 60% 100% );
   width: 160px;
-  padding-right: 120px;
+  height: 40px;
+  padding: 0 20px;
   padding-top: 9px;
-  padding-bottom: 13px;
-  padding-left: 20px;
-  display: inline-block;
-  background: linear-gradient(to bottom,  #F0F0F0 0 40%, #FFE17F 40% 55%, #F0F0F0 55% 100% );
-  color: #000000;
-  text-decoration: none;
+  padding-bottom: 11px;
 }
-.services__menu-link--current {
+
+.services__menu-link:focus {
+  background: linear-gradient(to bottom,  transparent 0 40%, #AF4FFF 40% 60%, transparent 60% 100% );
+}
+.services__menu-link:hover {
+  background: linear-gradient(to bottom,  #FFC700 0 40%, #FFC700 40% 60%, #FFC700  60% 100% );
+}
+
+.services__menu-link.condition:active{
+  background: linear-gradient(to bottom,  #000000 0 40%, #000000 40% 60%, #000000 60% 100% );
+  color: #FFE17F;
+  width: 280px;
+  text-align: ;
+}
 
 
-  }
  .services__list {
    /*outline: 2px solid red;*/
    outline-offset: -5px;
@@ -472,7 +607,8 @@ main{
    display: flex;
    align-items: flex-start;
 }
-  .services__item:last-child{
+
+.services__item:last-child{
     margin-bottom: 0;
   }
 
@@ -487,22 +623,41 @@ main{
 
 .delivery-order{
 }
-
-.delivery-order__container{
-  position: relative;
-  width: 1160px;
-  background-color: #F0F0F0;
-  min-height: 100px;
+.delivery-order__link-wrapper {
   display: flex;
+  text-decoration: none;
+  color:#000000;
+  display: flex;
+  background-color: #F0F0F0;
   justify-content: space-between;
   align-items: center;
 }
 
-.delivery-order__container:focus-within{
-  border: 5px solid #AF4FFF;
+.delivery-order__info-button{ /*не реагтриует как кнопка*/
+  margin-right: 33px;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(220, 220, 220, 0.5);
+  opacity: 50%;
+  border-radius: 50%;
 }
 
+.delivery-order__info-icon{
+  fill: #000000;
+  opacity: 0.3;
+}
 
+.delivery-order__wrapper-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFE17F;
+  width: 125px;
+  height: 100px;
+  margin: 0;
+
+}
 
 .delivery-order__title{
   margin-top: 37px;
@@ -515,48 +670,39 @@ main{
   letter-spacing: 0.2em;
 }
 
-.delivery-order__icon {
-  background-color: #FFE17F;
-  width: 125px;
-  height: 100px;
-  margin-right: auto ;
+
+
+.delivery-order__link-wrapper:focus {
+  border: 5px solid #AF4FFF;
 }
 
-.delivery-order__icon-image{
-  position: absolute;
-  left:39px;
-}
-
-.delivery-order__info-button{ /*не реагтриует как кнопка*/
-  margin-left: auto;
-  margin-right: 52px;
-  border: 0;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(220, 220, 220, 0.5);
-  opacity: 50%;
-  border-radius: 50%;
-}
-
-.delivery-order__info-button:hover{
-  fill: #000000;}
-
-.delivery-order__info-button:hover .delivery-order__icon{ /*как изменить цет иконки при наведении на кнопку?*/
-  background: #FFC700;
-  fill: #000000;
-}
-
-.delivery-order__info-button:disabled .delivery-order__icon {
+.delivery-order__link-wrapper:hover .delivery-order__wrapper-image {
   background-color: #FFC700;
 }
-.delivery-order__info-button:disabled .delivery-order__icon-image {
-  fill: #000000;
+
+.delivery-order__link-wrapper:hover {
+  background-color: #EBEBEB;
+}
+.delivery-order__link-wrapper:hover .delivery-order__info-button {
+  background-color:  #DCDCDC;
+}
+
+.delivery-order__link-wrapper:hover .delivery-order__info-icon{
+  opacity: 1;
+}
+
+.delivery-order__link-wrapper:active {
+  background-color: #EBEBEB;
+}
+
+.delivery-order__link-wrapper:active .delivery-order__icon-image {
   opacity: 0.3;
 }
 
-.delivery-order__info-button:disabled .delivery-order__title{
-  opacity: 0.3
+.delivery-order__link-wrapper:active .delivery-order__title {
+  opacity: 0.3;
 }
+
 .company{
   position: relative;
   padding-top: 146px;
@@ -567,6 +713,24 @@ main{
   /*outline: 5px solid greenyellow;*/
   display: flex;
   justify-content: space-between;
+}
+
+.line {
+  position: relative;
+  padding-top: 90px;
+
+
+}
+.line::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 7px;
+  background-color: #000000;
+  top:0;
+  left: 0;
+
 }
 
 .about{
@@ -589,18 +753,6 @@ main{
   margin: 0;
   margin-bottom: 26px;
 }
-
-.about__title::before {
-  content: "";
-  width: 80px;
-  height: 7px;
-  background-color: #000000;
-  position: absolute;
-  top: 97px;
-  left: 140px;
-
-}
-
 .about__advantage {
   margin: 0;
   margin-bottom: 50px;
@@ -615,30 +767,23 @@ main{
 }
 .about__item-logistic{
   margin-bottom: 28px;
-  margin-left: 26px;
 }
-.about__item-logistic::before { /*сейчас пресвоэлементы наложены друг на друга как их разнести - каждой лишке задавать класс и делать псевдоэлемент??*/
+.about__item-logistic::before {
+  display: inline-block;
   list-style-type: none;
-  margin-bottom: 28px;
+  margin-right: 26px;
   width: 8px;
   height: 8px;
   background-color: #FFE17F;
   border-radius: 50%;
   content: " ";
-  position: absolute;
-  top: 7px;
-  left:0px;
 }
 
  .about__more-information,
  .contacts__feedback {
-   display: inline-block;
-  font-family: "Raleway";
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  background: linear-gradient(to bottom,  #FFFFFF 0 30%, #FFE17F 30% 70%, #FFFFFF 70% 100% );
+  padding-left: 20px;
+  padding-right: 20px;
+
 }
 
  .about__more-information {
@@ -659,20 +804,11 @@ main{
   margin-bottom: 26px;
 }
 
-.contacts__title::before {
-  content: " ";
-  width: 80px;
-  height: 7px;
-  background-color: #000000;
-  position: absolute;
-  top: 97px;
-  left: 740px;
-
-}
 .contacts__offer{
   margin: 0;
   margin-bottom: 30px;
 }
+
 .contacts__title-shop,
 .contacts__subtitle {
   font-family: "Rubik";
@@ -687,23 +823,9 @@ main{
   margin-bottom: 15px;
 }
 
-.contacts__address {
-  position: relative;
-}
-
-.contacts__address::before {
-  content: " ";
-  width:80px ;
-  height: 7px;
-  background-color: #FFC700;
-  position: absolute;
-  left: 0;
-  top : 104px;
-}
 .contacts__address-text {
-  position: relative;
- font-style: normal;
- margin:0;
+  font-style: normal;
+  margin:0;
 }
 .contacts__address-phone{
   font-style: normal;
@@ -762,27 +884,50 @@ main{
 }
 
 .mailing__wrapper-form{
-
-}
+  cursor: pointer;}
 
 .mailing__input{
   font-size: 18px;
   opacity: 0.5;
-  width: 600px;
+  width: 601px;
   height: 52px;
   border: 0;
   background-color: #F0F0F0;
   border-bottom: 3px solid rgba(0,0,0,0.1);
   padding-top:6px;
-
 }
+
+.mailing__input:focus {
+  background-color: #DCDCDC;
+  border: none;
+}
+
+.mailing__input:hover {
+  border-color:rgba(0,0,0,0.2) ;
+  background-color:  #F0F0F0;;
+}
+
+.mailing__input:active {
+  background-color: #F0F0F0;
+  border-color: #000000;
+}
+
+.mailing__input:invalid {
+  border-color: #FF3D3D;
+}
+
 
 
 .mailing__free::before{
-  content: "✔";
-  color: #08AF00;
-  padding-right: 21px;
+  content: " ";
+  display: inline-block;
+  background-image: url("../img/tick-big.svg");
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  margin-right: 21px;
 }
+
 
 .mailing__button{
   font-family: Raleway;
@@ -794,28 +939,13 @@ main{
   letter-spacing: 0.2em;
   text-transform: uppercase;
   width: 260px;
+  box-sizing: border-box;
   border: 3px solid rgba(0,0,0,0.1);
-  padding-top: 17px;
-  padding-bottom: 18px;
+  padding-top: 14px;
+  padding-bottom: 11px;
 }
 
-.mailing__input:focus {
-  background-color: #DCDCDC;
-}
 
-.mailing__input:hover {
-  color:rgba(68, 68, 68, 1);
-  border-bottom: rgba(0, 0, 0, 0.2)
-  ;
-
-}
-.mailing__input:active  {
-  border-bottom: #000000;
-}
-
-.mailing__input:disabled  {
-  border-bottom: #FF3D3D;;
-}
 
 .mailing__button:focus  {
   border: 3px solid #AF4FFF;
@@ -823,17 +953,16 @@ main{
 
 .mailing__button:hover{
   background-color: #000000;
-  color:white;
+  color: #FFFFFF;
 }
 
 .mailing__button:active {
   color: #FFFFFF;
   opacity: 0.3;
+  border: none;
 }
 
-.mailing__button:disabled  {
-  color: #FF3D3D;;
-}
+
 
 
 .page-footer {
@@ -887,11 +1016,17 @@ main{
   color: #FFFFFF;
   text-decoration: none;
   font-style: normal;
+  border: 2px solid transparent;
+  border-radius: 25px;
+
 }
 
 .contacts__address-phone-footer:focus {
-  border: 2px solid #AF4FFF;
-  border-radius: 25px;
+  border-color: #AF4FFF;
+  outline: none;
+  padding: 14px 20px;
+  padding-bottom: 15px;
+
 }
 
 .contacts__address-phone-footer:hover {
@@ -912,36 +1047,41 @@ main{
   text-transform: uppercase;
   text-decoration: none;
   color: #FFFFFF;
-  padding: 12px 18px;
+  padding: 14px 20px;
+  padding-bottom: 15px;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  margin-right: 7px;
+}
+
+.nav-footer__link:focus {
+  border-color:  #AF4FFF;
 
 }
 
-.nav-footer__link:last-child:focus {
-  border: 2px solid #AF4FFF;
-  border-radius: 25px; /*увеличила скругление. тк изза паддингов радиус уменьшился*/
-}
-
-.nav-footer__link:last-child:hover {
-  position: relative;
+.nav-footer__link:hover {
   color: #FFC700;
+  border-bottom: 2px solid #FFC700; /*как уменьшить нижнюю границу в длину обнуляю паддинги - все начинает прыгать*/
+  border-radius: 0;
+
 }
 
-.nav-footer__link:last-child::before:hover { /*как реализовать  желтую линию при ховере?*/
-  content: " ";
-  position: absolute;;
-  left:0;
-  top: 28px;
-  width: 125px;
-  height: 2px;
+.nav-footer__link:active {
   color: #FFC700;
-}
-
-.nav-footer__link:last-child:disabled {
+  border-bottom: 2px solid #FFC700;
+  border-radius: 0;
   opacity: 0.3;
 }
 
 .social {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.social_block{
+  width: 80px;
+  height: 7px;
+  background-color: #FFC700;
+
 }
 
 .social__wrapper{
@@ -982,7 +1122,6 @@ main{
   right:0;
   bottom:0;
   margin:auto;
-  fill: #444444;
 }
 
 .social__link:focus {
@@ -1007,24 +1146,24 @@ main{
 
 
 .page-footer__logo-link {
-  display: block;
+  display: inline-block;
   position: absolute;
   right: 140px;
   bottom: 65px;
-
-
+  padding: 10px;
+  border: 2px solid  transparent;
+  border-radius: 10px;
 }
 
 .page-footer__logo-link:focus {
-  border: 2px solid #AF4FFF; /*почему при TAB рамка автоматически белая/*/
-  border-radius: 10px
-}
+  border-color: #AF4FFF;
+  }
 
-.page-footer__logo-link:hover .page-footer__logo-academy{
+.page-footer__logo-link:hover .page-footer__logo-academy{ /*не сработало*/
   fill: #FFFFFF;
 }
 
-.page-footer__logo-link:active  .page-footer__logo-academy{
+.page-footer__logo-link:active .page-footer__logo-academy{  /*не сработало*/
   fill: #FFFFFF;
   opacity: 0.3;
 }
@@ -1049,21 +1188,28 @@ color: #000000;
   margin-bottom: 20px;
 }
 
-.inner-navigation__list {
+.bread-crumbs__list {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.inner-navigation__item{
+.bread-crumbs_item{
   position: relative;
-
 }
 
-.inner-navigation__item:last-child{
-  margin-right: 0;
+.bread-crumbs__item:not(:last-child):after {
+  content: " ";
+  display: inline-block;
+  background-image: url("../img/nav-arrow.svg");
+  width: 4px;
+  height: 7px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
 }
 
-.inner-navigation__link {
+
+.bread-crumbs__link {
   display: inline-block;
   margin: 0;
   color: #000000;
@@ -1076,22 +1222,11 @@ color: #000000;
   padding-left: 13px;
 }
 
-.inner-navigation__link {                   /*почему эта контсрукция не сработала?*/
-  background-image: url(/img/nav-arrow.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-
-}
 
 .inner-navigation__link:last-child {
   content: 0;
 }
 
-.inner-navigation__link-icon{
-  opacity: 0.3;
-  margin-left: 15px;
-  margin-right: 17px;
-}
 
 .inner-navigation__link:focus{
   /*border: 5px solid #AF4FFF*/
@@ -1115,7 +1250,7 @@ color: #000000;
 }
 
 .сatalog__value-button{
-  border: 0;
+  border: none;
 }
 
 
@@ -1221,42 +1356,63 @@ color: #000000;
 }
 
 
-.specifications__control-input+.specifications__control::before {
-  content: "";
+.specifications__control-input + .specifications__control::before {
+  content: " ";
   display: inline-block;
   width: 20px;
   height: 20px;
   border: 2px solid #000000;
+  opacity: 0.2;
   border-radius: 3px;
   margin-right: 22px;
+
+}
+
+.specifications__control-input:checked + .specifications__control::before {
+  opacity: 1;
+}
+
+.specifications__control-input:checked +.specifications__control::before {
+  background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.specifications__control-input:checked+.specifications__control::before {
-  background-image: url(/img/tick.svg);
-}
-/*или*/
-
 .specifications__control-input-icon {
   position: absolute;
-  top: 9px; /*как поставить галочки по центру*/
+  top: 9px;
   left: 5px;
 }
 
-.specifications__control-input:checked:focus-within + .specifications__control::before {
-  border-color: #AF4FFF;
+.specifications__control-input:checked:focus + .specifications__control::before {
+  border-color: #AF4FFF ;
+  background-image: url("../img/Vector.png");
 }
-.specifications__control-input:checked:focus-within .specifications__control-mark {
+
+.specifications__control-input:focus + .specifications__control::before {
+  border-color: #AF4FFF;
+  opacity: 1;
+}
+
+.specifications__control-input:focus .specifications__control-mark { /*почему не изменился цвет?*/
   color: #AF4FFF;
 }
 
-.specifications__control-input:checked:focus-within .specifications__control-input-icon {
-  fill: #AF4FFF;
+.specifications__control-input:checked:hover + .specifications__control::before {
+  opacity: 0.5;
+  background-image: url("../img/Vector_hover.png");
 }
 
+.specifications__control-input:checked:hover .specifications__control-mark { /*почему не изменился цвет?*/
+  opacity: 0.5;;
+}
 
-
+.specifications__control-input:checked:active + .specifications__control::before {
+  background-image: url("../img/Vector_active.png")
+}
+.specifications__control-input:checked:active + .specifications__control::before {
+  border-color: rgba(0, 0, 0, 0.2);
+}
 
 .specifications__range-toggle{
   width: 18px;
@@ -1283,31 +1439,53 @@ color: #000000;
   opacity: 0;;
 }
 
-.specifications__control-input-radio:checked + .specifications__control-mark-radio {
-  color: #000000;
-}
-
-
-.specifications__control-mark {
-
-}
-.specifications__control-radio::before {
+.specifications__control-input-radio + .specifications__control-radio::before {
   content: "";
+  display: inline-block;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #EBEBEB;
-  opacity: 0.2;
-  border: 2px solid #000000;
-  box-sizing: border-box;
+  border: 2px solid  rgba(0, 0, 0, 0.2);
   margin-right: 17px;
 }
 
+.specifications__control-input-radio:checked + .specifications__control-radio::before {
+  border-color: #000000;
 
-.specifications__filter-price:focus-within {
-  color: #AF4FFF;
-  opacity: 0.3;
 }
+.specifications__control-input-radio:checked + .specifications__control-radio::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #000000;
+  position: absolute;
+  left: 6px;
+}
+
+.specifications__control-input-radio:checked:focus+ .specifications__control-radio::before {
+  border-color: #AF4FFF;
+}
+.specifications__control-input-radio:checked:focus + .specifications__control-radio::after {
+  background-color: #AF4FFF;
+}
+
+.specifications__control-input-radio:checked:hover + .specifications__control-radio::before {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+.specifications__control-input-radio:hover + .specifications__control-radio::after {
+  background-color: rgba(0, 0, 0, 0.2)
+}
+
+.specifications__control-input-radio:checked:hover+ .specifications__control-radio::before {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.specifications__control-input-radio:hover + .specifications__control-radio::after {
+  background-color: rgba(0, 0, 0, 0.2)
+}
+
 .toggle-min{
   position: relative;
 }
@@ -1354,19 +1532,8 @@ color: #000000;
   color: #000000;
 }
 .specifications__button{
-  margin-top: 52px;
-  font-family: "Raleway";
-  font-size: 18px;
-  line-height: 21px;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  width: 180px;
   border: none;
-  padding-top: 9px;
-  padding-left: 10px;
-  padding-bottom: 11px;
-  padding-left: 10px;
-  background: linear-gradient(to bottom, #EBEBEB 0 40%, #FFC700 40% 60%, #EBEBEB 60% 100%);
+  background: linear-gradient(to bottom,  transparent 0 42%,  #FFC700 42% 56%, transparent 56% 100% )
 
 }
 .sorting__select{
@@ -1447,6 +1614,10 @@ color: #000000;
   row-gap: 44px;
 }
 
+.product__item {
+  position: relative;
+}
+
 .product__image{
   text-decoration: none;
   outline-offset: -2px;
@@ -1485,10 +1656,18 @@ color: #000000;
   color: #444444;
 }
 
-.product__image:hover .product__image-photo { /*как наложить градиент повнрх изображения*/
-  background: linear-gradient(to bottom, rgba(240, 240, 240, 0.8), rgba(240, 240, 240, 0.8));
+
+.products__about_link.condition {
+  /*visibility: hidden;*/
+  width: 180px;
+  height: 40px;
+  padding: 9px 10px 11px;
+  background: linear-gradient(to bottom, transparent 0 40%, #FFC700 40% 60%, transparent 60% 100%);
+  position: relative; /*как разместить элемент по центру*/
+  top: -56%;
+  left: 25%;
 }
-/*как сделаьть чтобы кнопка ПОДРОБНЕЕ была по центру при ховере?*/
+
 .product__image:focus .product__image-photo {
   border: 5px solid #AF4FFF;
 }
@@ -1500,28 +1679,21 @@ color: #000000;
   color: #AF4FFF;
 }
 
-.products__about_link {
-  outline-offset: -2px;
-  text-decoration: none;
-  display: inline-block;
-  width: 180px;
-  padding-top: 9px;
-  padding-left: 10px;
-  padding-bottom: 11px;
-  padding-left: 10px;
-  background: linear-gradient(to bottom, #FFFFFF 0 40%, #FFC700 40% 60%, #FFFFFF 60% 100%);
+.product__image:hover {
+  opacity: 0.8;
+}
+
+.product__image:hover + .products__about_link.condition  { /*почему не сработало?*/
+  visibility: visible;
 }
 
 .products__about_link:hover {
   background: linear-gradient(to bottom, #FFC700 0 40%, #FFC700 40% 60%, #FFC700 60% 100%);
 }
 
-.products__about_link:focus {
-
-}
-
 .products__about_link:active {
-  opacity: 0.3;
+  background: linear-gradient(to bottom, #FFC700 0 40%, #FFC700 40% 60%, #FFC700 60% 100%);
+  color: rgba(0, 0, 0, 0.3); /*не сработала прозрачность*/
 }
 
 .products__button-download {
@@ -1550,8 +1722,7 @@ color: #000000;
     background-color: #EBEBEB;
     margin-bottom: 77px;
     margin-left: 72px;
-    padding-left: 29px;
-    padding-right: 30px;
+
 
   }
 
@@ -1559,31 +1730,59 @@ color: #000000;
     display: flex;
     justify-content: space-between;
     align-items:center;
-    min-height:  80px;
   }
 
   .pangination__link {
+    height: 38px;
+    width: 38px;
     display: inline-block;
+    text-decoration: none;
+    color: rgba(68, 68, 68, 0.3);
+    vertical-align: middle;
+    text-align: center;
 }
 
-.pangination__link:focus {
+.pangination__link.pangination__prev {
+  padding: 27px 29px;
+  width: 127px;
+  height: 70px;
+  margin-right: 157px;
+  color: #000000;
+}
+
+.pangination__link.pangination__next {
+  margin-left: 157px;
+  height: 70px;
+  width: 127px;
+  color: #000000;
+  padding: 27px;
+  padding-right: 30px;
+  padding-left: 0;
+}
+
+.pangination__prev:focus { /*почему прыгает при фокусе?*/
   border: 5px solid #AF4FFF;
 }
 
-.pangination__link:hover {
+.pangination__prev:hover {
   background-color: #DCDCDC;
 }
 
 .pangination__link:active {
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.pangination__prev {
-  margin-right: 200px;
+.pangination__link:focus {
+  border: 5px solid #AF4FFF; /*опять прыгет*/
 }
 
-.pangination__next {
-  margin-left: 157px;
-
+.pangination__link:hover {
+  color: #000000;
 }
+
+.pangination__link:active {
+  color: rgba(68, 68, 68, 0.1);
+}
+
+
 
