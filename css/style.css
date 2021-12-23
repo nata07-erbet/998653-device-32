@@ -321,12 +321,7 @@ main{
     height: 2px;
     background-color: #000000;
     transform: rotate(90deg) translate(-2px, 0);
-
-
-  }
-
-
-
+}
 
 .top-gadget__content-wrapper {
   width: 560px;
@@ -334,9 +329,6 @@ main{
   /*outline: 5px solid darkmagenta;*/
   outline-offset: -5px;
 }
-
-
-
 
 .site-list__link {
   position: relative;
@@ -391,6 +383,7 @@ main{
 
 }
 .top-gadget__wrapper{
+  position: relative; /*для центровки слайдера*/
   background: linear-gradient(to bottom, #FFE17F 0% 9%,  #FFFFFF 9% 100%);
 
 }
@@ -480,10 +473,10 @@ main{
   display: flex;
   width: 560px;
   justify-content: space-between;
-  position: absolute; /*не могу правильно спозиционировать элемент - подгоняла. НЕ пррнимаю алгоритма*/
-  outline: 2px solid springgreen;
+  position: absolute;
   offset: -2px;
-  top: 130%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .slider__button {
@@ -497,27 +490,76 @@ main{
   border: none;
   border: 2px solid transparent;
   border-radius: 6px;
+  background-image: url("../img/left-tall-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.slider__next {
+  transform: rotate(-180deg);
 }
 
 .slider__button:focus {
   border-color: #AF4FFF;
 }
 
-
-.slider__prev {
-  background-image: url("../img/left-tall-arrow.svg");
+.slider__button:hover {
+  opacity: 0.6; /*не сработало*/
 }
 
-.slider__next {
-  background-image: url("../img/right-tall-arrow.svg");
+.slider__button:active {
+  opacity: 0.3; /*не сработало*/
+}
+
+.slider__toggles-wrapper {
+  position: absolute;
+  outline: 2px solid springgreen;
+  offset: -2px;
+  top: 365px;
+  left:100%;
+}
+
+.slider__toggles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 
+.slider__toggle:not(:last-child) {
+  margin-right: 20px;
+}
+
+.slider__toggle-button {
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border: none;
+  outline: 2px solid #000000;
+  offset: -2px;
+  border-radius: 50%;
+}
+
+.slider__toggle-button:focus {
+  outline: 2px solid #AF4FFF;
+  offset: -2px;
+}
+
+.slider__toggle-button:hover {
+  outline: 2px solid rgba(0, 0, 0, 0.6) ;
+  offset: -2px;
+}
+
+.slider__toggle-button:active {
+  outline: 2px solid rgba(0, 0, 0, 0.3) ;
+  offset: -2px;
+}
+
+.slider__toggle-button--current {
+  background-color: #000000;
+}
 
 .goods__list{
-
   margin-bottom: 169px;
   padding: 0;
   display: flex;
